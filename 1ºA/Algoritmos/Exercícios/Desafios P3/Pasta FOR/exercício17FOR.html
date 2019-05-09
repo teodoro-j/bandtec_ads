@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <button type='button' onclick='exibir ()'>Exibir Números</button>
+        <div id='resultado'></div>
+    </form>
+</body>
+
+</html>
+
+<script>
+    function exibir() {
+        resultado.innerHTML = "";
+        for (r=40; r>=0; r--) {
+            resultado.innerHTML += `${r}<br>`;}
+
+            if (r % 2 == 0) {
+                resultado.style.color = green;
+            }
+            else if (r % 2 !=0){
+                resultado.style.color = red;
+            }
+            else if (r == 0){
+                resultado.style.color = black;
+            }
+    }
+</script>

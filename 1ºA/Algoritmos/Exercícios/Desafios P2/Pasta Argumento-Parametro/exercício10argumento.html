@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Cotação REAL</h2>
+    <select id='cambio' onchange='cambiar (cambio.value)'>
+        <option value='0.25'>Dolar Americanos</option>
+        <option value='0.75'>Iene Japones</option>
+        <option value='0.20'>Euro</option>
+        <option value='8000'>Bolivar Venezuelano</option>
+    </select>
+    <div id='div_cambio'></div>
+</body>
+
+</html>
+<script>
+    function cambiar (valor) {
+        var frase;
+        frase = `Cotação em R$${valor}`;
+        div_cambio.innerHTML = frase;
+    }
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class='esc'>
+    <img id='a' src='fogo.jpg' style='display: none'>
+    <img id='b' src='ar.jpg' style='display: none'>
+    <img id='c' src='terra.jpg' style='display: none'>
+    <img id='d' src='agua.jpg' style='display: none'>
+    </div>
+
+    <br><br>
+
+    <button type='button' onclick='mostrar (b,c,d,a)'>AR</button>
+    <button type='button' onclick='mostrar (c,d,a,b)'>TERRA</button>
+    <button type='button' onclick='mostrar (a,b,c,d)'>FOGO</button>
+    <button type='button' onclick='mostrar (d,a,b,c)'>AGUA</button>
+
+</body>
+</html>
+
+<script>
+    function mostrar(mostrar, esconder, esconder1, esconder2) {
+      mostrar.style.display = 'inline';
+      esconder.style.display = 'none';
+      esconder1.style.display = 'none';
+      esconder2.style.display = 'none';
+    }
+</script>

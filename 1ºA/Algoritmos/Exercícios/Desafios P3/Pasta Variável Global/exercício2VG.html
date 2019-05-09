@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        DEPOSITADO ATÉ AGORA: R$ <b id='deposito'>0.00</b><br>
+        Novo Depósito<input type='number' id='novo_deposito'><br>
+        <button type='button' onclick='depositar ()'>Depositar</button>
+    </form>
+</body>
+
+</html>
+
+<script>
+    var total = 0;
+    function depositar() {
+        total += Number(novo_deposito.value);
+        deposito.innerHTML = `${total.toFixed(2)}`;
+    }
+</script>

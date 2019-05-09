@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VARIÁVEIS GLOBAIS
+
+    </title>
+</head>
+<body>
+    <button type='button' onclick='feliz ()'>Se você esta feliz, clique aqui</button>
+    <div>
+        Você já disse
+        <b id='b_feliz'>0</b>vezes que esta feliz hoje!
+    </div>
+</body>
+</html>
+
+<script>
+    var cliques = 0 ;
+    function feliz () {
+        cliques++;
+        b_feliz.innerHTML = cliques;
+    }
+</script>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2> Cofrinho Mítico e Criterioso</h2> <br>
+
+        <img id='cofre' src='cofrinho.jpg'> <br>
+
+        Meta: <input type='number' id='meta' value='0'> <br>
+
+        <div id='div_mensagem2'></div> <br>
+
+        Depósito: <input type='number' id='deposito' value='0'> <br>
+
+        <div id='div_mensagem3'></div> <br>
+
+        Total depositado até agora R$ <b id='valor'> 0</b> <br>
+        <button type='button' onclick="depositar ()">Depositar</button>
+    </form>
+
+    <div id='div_mensagem'></div>
+
+</body>
+</html>
+ 
+<script>
+    function depositar () {
+      var x = Number(valor.innerHTML);
+      x = x + Number(deposito.value);
+      valor.innerHTML = x;
+
+      var cor;
+      var frase;
+
+      if (meta.value <= 0 ) {
+          div_mensagem2.style.color = 'red';
+          div_mensagem2.innerHTML = 'Por gentileza, insira uma meta acima de 0';
+          div_mensagem.style.display = 'none';
+          }
+          else {
+               div_mensagem2.innerHTML = ''; // como já foi referenciado o texto, usa-se para sumir
+          }
+    
+      
+
+      if (deposito.value <=0 ) {
+          div_mensagem3.style.color = 'red';
+          div_mensagem3.innerHTML = 'Para de ser burro e deposite algum valor válido!';
+          div_mensagem.style.display ='none';}
+          else {
+              div_mensagem3.innerHTML ='';
+          }
+    
+
+      if (x >= meta.value) {
+        cor = 'blue';
+        frase = 'Ai sim! Bati a meta!';
+        cofre.src = 'cofre_cheio.jpg';
+      }
+      else {
+        cor ='green';
+        var falta = meta.value - x;
+        frase =`Ainda falta R$${falta.toFixed(2)} para a meta! #focanameta`; }
+      
+
+      div_mensagem.innerHTML = frase;  
+      div_mensagem.style.color = cor;
+    }
+</script>

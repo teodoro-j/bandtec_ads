@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+Quantas vezes vai ao cinema por mês?
+<input type="number" id="cinema"><br><br>
+
+Preço do ingresso
+<input type="number" id="custo"><br><br>
+
+O que você compra a mais?
+<select id="combo">
+
+<option value="0">#Economia! só o filme</option>
+<option value="15">Só pipoca</option>
+<option value="23">Pipoca e Refrigerante</option>
+<option value="31">Combo de Pipoca + Refri + M&M</option>
+
+</select><br><br>
+
+
+<button type="button" onclick="gastos()">Calcular gastos com Cinema</button><br><br>
+
+</form>
+
+<div id="div_mensagem" style="color:blue"></div>
+
+</body>
+</html>
+
+<script>
+function gastos(){
+
+var mes= (Number(custo.value)/2 + Number(combo.value))*Number(cinema.value);
+var ano= mes*12;
+
+div_mensagem.innerHTML= `Camila, você gasta R$ ${mes.toFixed(2)} por mês e R$ ${ano.toFixed(2)} por ano com suas idas ao cinema.`
+
+}
+
+</script>

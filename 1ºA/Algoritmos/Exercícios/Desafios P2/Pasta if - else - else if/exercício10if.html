@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>Eleições</h2>
+        Votos do Zé<input type='number' id='ze' value='0'>
+        Votos da Maria <input type='number' id='maria' value='0'><br>
+        <button type="button" onclick="votar_ze()">Votos do Zé</button>
+        <button type='button' onclick='votar_maria()'>Votos da Maria</button><br>
+        <button type='button' onclick='parcial ()'>Resultado Parcial</button>
+        
+    </form>
+    <div id='div_mensagem'></div>
+
+</body>
+</html>
+
+<script>
+    function votar_ze (){
+        var x = Number(ze.value) + 1;
+        ze.value = x;
+    }
+    function votar_maria () {
+        var x = Number (maria.value) + 1;
+        maria.value = x; 
+    }
+
+    function parcial () {
+        if (ze.value > maria.value) {
+            ze.style.color='blue';
+            maria.style.color='red';
+        }
+        else {
+            ze.style.color='red';
+            maria.style.color='blue';
+        }
+
+        if (ze.value == maria.value) {
+            ze.style.color ='black';
+            maria.style.color ='black';
+        }
+
+    }
+
+
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>RENDA FAMILIAR</h2>
+    <form>
+        Salário Pai<input type='number' id='pai'><br>
+        Salária Mãe<input type='number' id='mae'><br>
+        <button type='button' onclick='verificar_bolsa()'>Verificar Bolsa Família</button>
+    </form>
+        <div id='div_mensagem'></div>
+
+</body>
+</html>
+
+<script>
+    function verificar_bolsa () {
+        if ((Number(pai.value) + Number(mae.value)) <250.70) {
+        div_mensagem.innerHTML = 'Você tem direito ao Programa' ;}
+        else {
+        div_mensagem.innerHTML = 'Você não tem direito ao Programa';} 
+    }
+    
+
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>TIME</h2>
+        <select id='brasao'>
+            <option value=''>Escolha seu time</option>
+            <option value='1'>Palmeiras</option>
+            <option value='2'>Corinthias</option>
+            <option value='3'>São Paulo</option>
+            <option value='4'> Santos</option>
+        </select>
+        <button type='button' onclick='exibir ()'>Exibir Escudo</button>
+    
+        <img id='image'> 
+        <!-- <img id='c'>
+        <img id='sp'>
+        <img id='s'>
+        <img src = 'palmeiras.jpg'>  -->
+
+    </form>
+</body>
+</html>
+<script>
+   function exibir () {
+       if (brasao.value == 1) {
+           image.src ='palmeiras.jpg'
+       }
+       if (brasao.value == 2) {
+           image.src ='corinthians.jpg'
+       }
+       if (brasao.value == 3) {
+           image.src= 'sp.jpg'
+       }
+       if (brasao.value == 4) {
+           image.src= 'santos.jpg'
+       }
+
+   }
+</script>

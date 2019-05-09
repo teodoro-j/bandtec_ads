@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>EAI?</h2>
+        <select id='sensacao'>
+            <option value=''>Selecione um item</option>
+            <option value='1'> Dorme muito bem</option>
+            <option value='2'>Dorme entre 4 e 6 horas por npite</option>
+            <option value='3'>Dorme menos de 4 horas por noite</option>
+       </select> <br>
+       <button type='button' onclick='dormir_melhor ()'>Mostrar efeito do sono</button>
+:       <br>
+       <img id='image'>
+    </form>
+    
+</body>
+</html>
+
+<script>
+    function dormir_melhor () {
+        if (sensacao.value == 1) {
+           image.src = 'feliz.jpg'
+        }
+        if (sensacao.value == 2) {
+            image.src ='cansada.jpg'
+        }
+        if (sensacao.value == 3) {
+            image.src = 'triste.jpg'
+        }
+
+    }
+</script>

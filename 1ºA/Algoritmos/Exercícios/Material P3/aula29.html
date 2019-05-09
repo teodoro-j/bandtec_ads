@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>Refazendo exercício com FOR</h2>
+        Quantas vezes? <input type='number' id='qtvezes'><br>
+        <button type='button' onclick='validar()'>Validar</button>
+    </form>
+</body>
+</html>
+
+<script>
+    function validar () {
+        var rep = Number(qtvezes.value);
+        for (r = 0; r < rep ; r++){
+            alert (`Problema seu`);
+        }
+    }
+</script>

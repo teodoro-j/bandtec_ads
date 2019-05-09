@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form> <H2>EMAGREÇA JÁ!!</H2>
+        <input type='number' id='km' placeholder='Km de caminhada'> <br>
+        <input type='number' id='flexoes' placeholder='Número de flexões'> <br>
+        <input type='number' id='abdominais' placeholder='Número de abdominais'> <br>
+        <input type='number' id='latas' placeholder='Latas de refrigerante'><br>
+        <button type='button' onclick='calcular_calorias ()'>CALORIAS </button>
+
+    </form>
+</body>
+</html>
+
+<script>
+
+function calcular_calorias () {
+ var calorias = (km.value) *2 + (abdominais.value) * 1.2 + (flexoes.value) * 1.7 + (latas.value) *3
+ alert (`Você perdeu ${calorias} calorias`)
+}
+</script>

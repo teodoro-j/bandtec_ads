@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h2>ANALISE DE VIDA - ELSE IF</h2>
+        Qual sua idade? <input type="number" id='idade'><br>
+        Quantos filhos tens? <input type="number" id='filhos'><br>
+        <button type="button" onclick="validar_idade ()">Analisar vida</button>
+
+        <div id='div_mensagem'></div>
+    </form>
+
+</body>
+
+</html>
+
+<script>
+    function validar_idade() {
+        var frase;
+
+        if (idade.value < 14) {
+            frase = 'Voce é uma criança';}
+
+        else if (idade.value >= 18){
+            frase = 'Você é maior de idade';
+
+            if (filhos.value >=3) {
+            frase = 'Não tem TV ou internet em casa';}
+
+            else {
+                frase = 'Parabens pelos filhos'}
+        }
+
+        else {
+            frase='Você é menor de idade';
+            if (filhos.value >0) {
+                frase = 'Nossa, começou cedo hein!!'}
+        }
+
+    div_mensagem.innerHTML = frase;
+
+    }
+
+  </script>

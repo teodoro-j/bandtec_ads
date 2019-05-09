@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>EQUIPE IDÃO</h2>
+        Valor em R$ <input type="number" id='reais' placeholder="Valor em reais"><br>
+        Cotação do dolár (em R$) <input type="number" id='dolar' placeholder="cotação"><br>
+        <button type="button" onclick="cotar_cambio ()">Converter e Avaliar</button><br>
+    </form>
+    <div id='div_mensagem'></div>
+    <div id='div_mensagem2'></div>
+</body>
+</html>
+
+<script>
+    function cotar_cambio () {
+        var cota = Number(reais.value)/Number (dolar.value);
+        div_mensagem.innerHTML = `R$${reais.value}, na cotação atual da U$${cota}`;
+        if (cota >1000.99) {
+            div_mensagem2.innerHTML = 'Você tem muitos doláres!!';}
+            else {
+                div_mensagem2.innerHTML = 'Você tem poucos doláres!!';
+            }
+        }
+   
+
+</script>

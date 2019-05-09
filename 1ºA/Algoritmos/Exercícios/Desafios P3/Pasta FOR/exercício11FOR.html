@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista 09 - questão 11</title>
+</head>
+<body>
+<form>
+    Quantos homens? <input type="number" id="homens">
+    <br>
+    Quantas mulheres? <input type="number" id="mulheres">
+    <br>
+    Quantas crianças? <input type="number" id="criancas">
+    <br><br>        
+    <button type="button" onclick="ilustrar()">
+        Ilustrar Elevador
+    </button>
+</form>        
+
+<br>
+<div id="div_elevador" style="border-style: solid; border-width: 1px">
+</div>
+
+</body>
+</html>
+
+
+<script>
+function ilustrar() {
+    
+    div_elevador.innerHTML = '';
+    var peso_total = 0;
+    var contador_homens = 0;
+    var contador_mulheres = 0;
+    var contador_criancas = 0;
+     
+    for(h = contador_homens; h < Number(homens.value); h++) {
+        div_elevador.innerHTML += '<img src="homem.jpg">';
+        peso_total+=80;
+    }    
+
+    for(m= contador_mulheres; m < Number(mulheres.value); m++) {
+        div_elevador.innerHTML += '<img src="estrela.jpg">';
+        peso_total+=70;
+    }    
+
+    for(c = contador_criancas; c< Number(criancas.value); c++) {
+        div_elevador.innerHTML += '<img src="crianca.jpg">';
+        peso_total+=30;
+    }    
+
+    var total_pessoas = contador_homens+contador_mulheres+contador_criancas;
+
+    if (peso_total>600 || total_pessoas>8) {
+        div_elevador.innerHTML = ''; // 'limpando' a div, portanto tirando as imagens do 'elevador' 
+        alert("Elevador cheio demais!");
+    } 
+
+}
+</script>

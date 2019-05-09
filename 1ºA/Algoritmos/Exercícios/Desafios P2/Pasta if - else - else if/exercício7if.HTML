@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Salário $<input typw='number' id='salario' placeholder="Digite seu Salário">
+        <button type='button' onclick="mostrar_salario ()">Status Social</button>
+    </form>
+        <div id="div_mensagem"></div>
+        
+
+</body>
+</html>
+
+<script>
+    function mostrar_salario () {
+        if (salario.value <1000) {
+            div_mensagem.innerHTML = '#aindatenhoqueralarmuito';}
+                if (salario.value <=200) {
+                    div_mensagem.innerHTML = div_mensagem.innerHTML + '<br>#precisodeajuda';
+                }
+            else {
+                if (salario.value >=1000) {
+            div_mensagem.innerHTML = '#estoumenospobre';}
+                if (salario.value >=2500) {
+            div_mensagem.innerHTML = div_mensagem.innerHTML + '<br>#ostentação';}
+                if (salario.value >5000) {
+            div_mensagem.innerHTML = div_mensagem.innerHTML + '<br>#amigodoneymar';}
+        
+        }
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id='zn' style='color: gray' onclick='mudar_cor(zn, zs, zo, zl, centro)'>NORTE</div>
+    <div id='zs' style='color: gray' onclick='mudar_cor(zs, zn, zo, zl, centro)'>SUL</div>
+    <div id='zo' style='color: gray' onclick='mudar_cor(zo, zl, centro, zs, zn)'>OESTE</div>
+    <div id='zl' style='color: gray' onclick='mudar_cor(zl, centro, zs, zn, zo)'>LESTE</div>
+    <div id='centro' style='color: gray'onclick='mudar_cor(centro, zn, zs, zo, zl)'>CENTRO</div>
+    
+</body>
+</html>
+
+<script>
+    function mudar_cor (azul, cinza1, cinza2, cinza3, cinza4) {
+        azul.style.color = 'blue';
+        cinza1.style.color= 'grey';
+        cinza2.style.color= 'grey';
+        cinza3.style.color= 'grey';
+        cinza4.style.color= 'grey';
+    }
+// NÃO PODE TER O MESMO NOME DE PARAMETRO!!!
+</script>

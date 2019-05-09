@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2> LANCHONETE</h2>
+        Preço da Laranja <input type='number' id='plaranja'><br>
+        Quantas laranjas <input type='number'id='laranja'> <br>
+        Preço da Maça <input type='number' id='pmaca'><br>
+        Quantas maças <input type="mumber" id='maca'><br>
+        Preço da Banana <input type='number' id='pbanana'><br>
+        Quantas banamas <input type='number' id='banana'><br>
+        Preço da Uva <input type='number' id='puva'><br>
+        Quantas uvas <input type='number' id='uva'><br>
+        <button type='button' onclick='calcular ()'>Calcular Preço da Salada</button>
+        <div id='div_mensagem'></div>
+    </form>
+    
+</body>
+</html>
+
+<script>
+    function calcular () {
+        var x = (Number(plaranja.value) * Number(laranja.value)) +
+        (Number(pmaca.value) * Number(maca.value)) +
+        (Number(pbanana.value) * Number(banana.value)) +
+        (Number(puva.value) * Number(uva.value));
+        var y = (x/10);
+        div_mensagem.innerHTML = `Sua salada vai custar R$${x} e cada porção é R$${y}`;
+    }
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Caminhão</h1><br>
+<form>
+    Quantidade de porcos:
+    <input type="number" id="porco"><br>
+    Quantidade de cavalos:
+    <input type="number" id="cavalo"><br>
+    Quantidade de bois:
+    <input type="number" id="boi"><br>
+
+    <button type="button" onclick="ilustrar()">Ilustrar Caminhão</button><br>
+</form>
+<div id="div_mensagem" style="border-style:solid; border-width: 1px; padding:100px"></div>
+</body>
+</html>
+
+<script>
+function ilustrar() {
+
+var contador=0;
+div_mensagem.innerHTML="";
+
+
+while (contador< Number(porco.value)) {
+contador++;
+div_mensagem.innerHTML+='<img src="porco.png">';
+}
+
+var contador=0;
+
+while (contador< Number(cavalo.value)) {
+contador++;
+div_mensagem.innerHTML+='<img src="cavalo.jpg">';
+}
+
+var contador=0;
+
+while (contador< Number(boi.value)) {
+contador++;
+div_mensagem.innerHTML+='<img src="boi.png">';
+}
+
+var contador=0;
+
+
+
+
+}
+
+
+
+
+
+</script>

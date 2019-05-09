@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+
+        }
+
+        #div_mensagem {
+            font-weight: bold;
+        }
+    
+    </style>
+</head>
+<body>
+        <h2>JOGO PRINCESAS : MULAN</h2>
+    <form>
+
+        <div id='heroi'>
+            <img id='heroi_x' src='mulan.jpg' style='width: 300px; height: 200px'> <br>
+            <p id='morte1' style="width: 300px; height:20px; background-color: red"></p>
+            <button type='button' onclick='apanhar_um ()'>APANHAR</button>
+        </div>
+
+        <div id='heroi2'>
+            <img id='heroi_z' src='chan.jpg' style='width:300px'> <br>
+            <p id='morte2' style='width: 300px; height:20px; background-color: blue'></p>
+            <button type='button' onclick='apanhar_dois ()'>APANHAR</button>
+        </div>
+
+
+        
+    </form>
+    <div id='div_mensagem'></div>
+</body>
+</html>
+
+<script>
+    function apanhar_um () {
+        morte1.style.width = parseInt(morte1.style.width) - 25 + 'px';
+        if ( parseInt(morte1.style.width) == 0) {
+            div_mensagem.innerHTML = 'Chang é VENCEDOR';
+            heroi_x.src = 'caixao.jpg';
+        }
+
+    }
+
+    function apanhar_dois () {
+        morte2.style.width = parseInt(morte2.style.width) - 25 + 'px';
+        if ( parseInt(morte2.style.width) ==0) {
+            div_mensagem.innerHTML = 'Mulan é Vencedora';
+            heroi_z.src = 'caixao.jpg';
+        }
+    }
+
+
+</script>
+
+<!-- //  ++ depois,  usa primeiro o valor e depois aumenta  -->
+
+<!-- //  ++ antes, necessariamente primeiro aumenta o valor e depois usa -->

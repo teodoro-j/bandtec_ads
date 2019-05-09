@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Continuada 2</title>
+</head>
+
+<body>
+    <form>
+        <h2>Zé Buduia x Bebiba Alcoólica</h2>
+        Quantas taças de vinho: <input type='number' id='vinho'><br>
+        Qual o preço da taça: <input type='number' id='preco'><br>
+        <select id='tolerancia'>
+            <option value='5'>Fraco pra bebiba</option>
+            <option value='9'>Bebo todo final de semana</option>
+            <option value='20'>Só fico bêbado com Querosene</option>
+        </select><br>
+        <button type='button' onclick='embebedar ()'>Tomar Vinho</button>
+        <div id='resultado'></div>
+        <div id='imagem'></div>
+        <div id='tacas_vinho'></div>
+    </form>
+</body>
+
+</html>
+
+<script>
+    function embebedar() {
+        imagem.innerHTML = '';
+        var v = Number(vinho.value);
+
+        if (v >= 0 && v <= 30) {
+            var p = Number(preco.value);
+            var total = v * p;
+            if (p < 0.03) {
+                alert('Onde já se viu vinho tão barato assim?');
+            }
+            else {
+                resultado.innerHTML = `Zé Buduia tomou ${v} taças de vinho e pagou R$${total} por elas.`;
+                var t = Number(tolerancia.value);
+
+                if (t == 5) {
+
+                    if (v >= 1 && v <= 2) {
+                        imagem.innerHTML = '<img src="levemente.jpg">';
+                    }
+                    else if (v >= 5) {
+                        imagem.innerHTML = '<img src="super.jpg">';
+                    }
+                    else if (v >= 3 && v <= 4) {
+                        imagem.innerHTML = '<img src="visivelmente.jpg">';
+                    }
+
+                }
+
+                else if (t == 9) {
+
+                    if (v >= 3 && v <= 5) {
+                        imagem.innerHTML = '<img src="levemente.jpg">';
+                    }
+                    else if (v >= 9) {
+                        imagem.innerHTML = '<img src="super.jpg"><br>';
+                    }
+                    else if (v >= 6 && v >= 8) {
+                        imagem.innerHTML = '<img src="visivelmente,jpg">';
+                    }
+
+                }
+                else {
+                    if (v >= 10 && v <= 13) {
+                        imagem.innerHTML = '<img src="levemente.jpg">';
+                    }
+                    else if (v >= 20) {
+                        imagem.innerHTML = '<img src="super.jpg">';
+                    }
+                    else if (v >= 14 && v <= 19) {
+                        imagem.innerHTML = '<img src="visivelmente.jpg">';
+                    }
+
+                }
+                var bebidas = 0;
+                while (bebidas < v) {
+                    tacas_vinho.innerHTML += '<img src="taca_vinho.jpg">'
+                    bebidas++;
+
+                }
+            }
+        }
+
+        else {
+            alert(`Só é possível beber de 0 a 30 taças`);
+        }
+    }
+</script>

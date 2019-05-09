@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>AJUDE A COMPRAR UMA PISCINA</h2>
+        Qual altura da piscina <input type='number' id='altura'><br>
+        <button type='button' onclick='analisar()'>Analisar Piscina</button>
+    </form>
+    <div id='div_mensagem'></div>
+</body>
+</html>
+
+<script>
+    function analisar () {
+        var frase;
+        if (altura.value >=0 && altura.value <=0.3){
+            frase = 'Crianças de 0 a 6 meses';}
+        
+        else if (altura.value >0.3 && altura.value <=0.5){
+            frase = 'Crianças 7 a 9 meses';}
+
+        else if (altura.value >0.5 && altura.value <=0.65) {
+            frase = 'Crianças de 10 a 12 meses';}
+
+        else {
+            frase = '';}
+
+    div_mensagem.innerHTML = frase;
+    }
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista 09 - questão 09</title>
+</head>
+<body>
+<form>
+    Andar atual: <input type="number" id="atual">
+    <br>
+    Andar solicitado: <input type="number" id="solicitado">
+    <br>
+    <button type="button" onclick="partir()">
+        Partir
+    </button>
+</form>        
+
+<br>
+<div id="div_elevador"></div>
+
+</body>
+</html>
+
+
+<script>
+function partir() {
+    var andar_atual = Number(atual.value);
+    var andar_solicitado = Number(solicitado.value);
+
+    if (andar_atual<0 || andar_atual>20 || andar_solicitado<0 || andar_solicitado>20) {
+        alert('Andares válidos: entre 0 e 20');
+    } else {
+        if (andar_atual == andar_solicitado) {
+            div_elevador.innerHTML = 'Elevador vai continuar onde está';
+        } else  {
+            if (andar_atual > andar_solicitado) {
+                div_elevador.innerHTML = 'Descendo';
+                for (n= andar_atual; n >= andar_solicitado; n--) {
+                    div_elevador.innerHTML += `<br> Elevador no andar ${n}`;
+                }
+            } else {
+                div_elevador.innerHTML = 'Subindo';
+                for (n=andar_atual ; n <= andar_solicitado; n++) {
+                    div_elevador.innerHTML += `<br> Elevador no andar ${n}`;
+                }
+            }
+        }
+    }
+}
+</script>

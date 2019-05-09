@@ -1,0 +1,10 @@
+/* Em arquivos ccs só pode escrever em 
+linguagem css.
+Esses arquivos também são chamados de folhas de estilo.*/
+
+h2{ color:blueviolet;}
+
+p {color: rgb(192, 237, 255);}
+
+b {font-size:2em;
+  background-color:rgb(133, 245, 133);}

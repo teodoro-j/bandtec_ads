@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>ORAÇÃO</h2><br>
+        <select id='sfrancisco'>
+            <option value=''>Escolha um trecho</option>
+            <option value='que eu leve o amor'> Onde houver ódio </option>
+            <option value='que eu leve o perdão'> Onde houver ofensa </oprion>
+            <option value='que eu leve a união'> Onde houver discordia </option>
+            <option value='que eu leve a fé'> Onde hpuver dúvida </option> 
+        </select>
+        <br>
+        <button type='button' onclick='oracao ()'> Revelar boa obra </button>
+
+        
+    </form>
+  
+ <div id='div_messagem' style='color: rgb(20, 131, 53); margin-top: 30px'></div>
+
+</body>
+</html>
+
+<script>
+    function oracao () {
+   div_messagem.innerHTML = sfrancisco.value;
+
+}
+
+</script>

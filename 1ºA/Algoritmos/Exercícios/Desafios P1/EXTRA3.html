@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>Formulário de Aposentadoria</h2>
+        <br>
+        <input type="number" id="idade">
+        <button type="button" onclick="aposentadoria_homem()"> Aposentadoria Homem</button> <button type="button" onclick="aposentadoria_mulher ()"> Aposentadoria Mulher</button>
+    </form>
+</body>
+</html>
+
+<script>
+    function aposentadoria_homem () {
+        var homem = 65-  idade.value ;
+        alert (` O tempo que falta pra se aposentar é ${homem} anos`);
+        
+    
+
+    };
+    function aposentadoria_mulher () {
+        var mulher =  60 - idade.value ;
+        alert (` O tempo que falta pra se aposentar é ${mulher} anos`);
+
+
+    }
+</script>

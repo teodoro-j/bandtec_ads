@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Nota Continuada <input type='number' id='continuada'><br>
+        Nota Integrada <input type='number' id='integrada'><br>
+        <button type='button' onclick='calcular()'>Calcular Média</button>
+    </form>
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+
+<script>
+    function calcular (){
+        var x = (Number(continuada.value)*0.4 + Number(integrada.value)*0.6);
+        var cor = x >=5? "blue":"red" ;
+        var frase = x >=5? "Aprovado":"Reprovado";
+
+        div_mensagem.innerHTML = frase;
+        div_mensagem.style.color = cor
+    }
+</script>

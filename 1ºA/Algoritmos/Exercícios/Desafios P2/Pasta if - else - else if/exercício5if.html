@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Nome: <input type='text' id='nome' placeholder="Digite seu Nome"><br>
+        Continuada: <input type="number" id='continuada' placeholder="Média das Continuadas"><br>
+        Integrada: <input type='number' id='integrada' placeholder="Nota da Integrada"><br>
+        <button type='button' onclick="verificar()">Verificar Resultados</button><br>
+    </form>
+
+    <div id='div_mensagem'></div>
+    <img id='ruim'> <!--src='deslike.jpg'> -->
+    <img id='bom'> <!--src='joia.jpg'> -->
+    
+</body>
+</html>
+<script>
+    function verificar () {
+        var media = Number(continuada.value)*0.2 + Number(integrada.value) * 0.8;
+        if (media >= 5) {
+            div_mensagem.style.color = "blue";        
+            div_mensagem.innerHTML = `Parabéns ${nome.value}, 
+            você foi aprovado com média final ${media.toFixed(2)}`;
+            bom.src= 'joia.jpg';
+            ruim.style.display ='none';
+            bom.style.display= 'inline';
+
+        }
+
+        else  {
+            div_mensagem.style.color = "red";        
+            div_mensagem.innerHTML = `Olá, ${nome.value}, 
+            infelizmente você foi com média final ${media.toFixed(2)}`;
+            ruim.src= 'deslike.jpg';
+            bom.style.display ='none';
+            ruim.style.display = 'inline';
+        }
+    }
+
+</script>

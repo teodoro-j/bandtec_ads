@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>Desconto</h2>
+        Digite seu salário <input type='number' id='salario'><br>
+        <button type='button' onclick="gerar_desconto ()">Gerar Desconto</button>
+    </form>
+    <div id='div_mensagem'></div>
+    <div id='div_mensagem1'></div>
+    <div id='div_mensagem2'></div>
+</body>
+</html>
+
+<script>
+    function gerar_desconto () {
+        var v_salario = Number(salario.value);
+        cal_inss(v_salario);
+        cal_ir(v_salario);
+        cal_vt(v_salario);}
+
+    function cal_inss(v_salario) {
+        var inss = v_salario * 0.1 ;
+        div_mensagem.innerHTML = `Desconto de INSS R$${inss}`;}
+
+    function cal_ir(v_salario) {
+        var ir = v_salario * 0.15;
+        div_mensagem1.innerHTML = `Desconto de IR R$${ir}`;}
+
+    function cal_vt(v_salario) {
+        var vt = v_salario * 0.06;
+        div_mensagem2.innerHTML = `Desconto de VT R$${vt}`;}
+    
+</script>

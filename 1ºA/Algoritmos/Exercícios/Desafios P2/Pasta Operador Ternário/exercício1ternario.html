@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Salario Pai <input type='number' id='pai'><br>
+        Salario Mae <input type='number' id='mae'><br>
+        <button type='button' onclick='verificar ()'>Verificar</button>
+        <div id='div_mensagem'></div>
+    </form>
+</body>
+</html>
+<script>
+    function verificar () {
+        var frase = (Number(pai.value) + Number(mae.value)) <250.70? "Voce tem direito a Bolsa Familia":"Nada de Bolsa Familia";
+    div_mensagem.innerHTML = frase;
+    }
+</script>

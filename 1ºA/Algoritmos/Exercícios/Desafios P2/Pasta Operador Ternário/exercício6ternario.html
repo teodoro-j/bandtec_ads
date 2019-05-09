@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Salario <input type='number' id='salario'><br>
+        <button type='button' onclick='ver_situacao ()'>Ver Situação</button>
+        <div id='div_mensagem'></div>
+    </form>
+</body>
+</html>
+
+<script>
+    function ver_situacao () {
+       var frase = Number(salario.value) <200? "#Bem Pobre": Number(salario.value) <=1200? "Pobre": Number (salario.value) <=2000? "Nem tão Pobre": "Classe média ou Rico";
+
+       div_mensagem.innerHTML = frase;
+    }
+//  NÃO É MA BOA PRÁTICA SER FEITO ESSE TIPO DE CÓDIGO
+</script>

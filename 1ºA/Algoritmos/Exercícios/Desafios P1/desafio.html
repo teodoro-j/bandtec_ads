@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>NOTA FINAL DO SEMESTRE</h2> <br>
+    <form>
+        <input type='text' id='serterrestre' placeholder="Seu Nome" autofocus> <br>
+        <input type='number' id='cont' placeholder=" Nota Prova Continuada"> <br>
+        <input type='number' id='int' placeholder='Nota Prova Integrada'> <br>
+        <button type='button' onclick='nota_final()'> Nota Final </button>
+        
+    </form>
+
+    <div id='div_mensagem' style='color: rgb(20, 50, 131)'></div>
+    
+</body>
+</html>
+
+<script> 
+function nota_final() {
+    var nome = (serterrestre.value);
+    var media =  parseInt(cont.value) * 0.4 + parseInt(int.value) * 0.6; 
+    div_mensagem.innerHTML = `Ola, ${nome}! Sua nota final é ${media}.`;
+}
+
+
+
+
+
+
+
+
+
+</script>

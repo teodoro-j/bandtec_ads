@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>IBGE</h2>
+        Renda Familiar <input type='number' id='renda'><br>
+        <button type='button' onclick="avaliar ()">Mostrar Classe</button>"
+    </form>
+    <div id='div_mensagem'></div>
+    
+</body>
+</html>
+
+<script>
+    function avaliar () {
+        var frase;
+        if (renda.value <2000) {
+            frase = 'Classe E';}
+
+        else if (renda.value >20000) {
+            frase = 'Classe A';}
+        
+        else if (renda.value >10000) {
+            frase = 'Classe B';
+        }
+
+        else if (renda.value >4000) {
+            frase = 'Classe C';}
+
+        else {
+            frase = 'Classe D';}
+
+    div_mensagem.innerHTML = frase;
+    }
+</script>

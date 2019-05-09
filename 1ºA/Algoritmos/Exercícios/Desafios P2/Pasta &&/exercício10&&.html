@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Digite seu nome<input type='text' id='nome'><br>
+        Digite sua idade<input type='number' id='idade'><br>
+        Digite seu salário<input type='number' id='salario'><br>
+        <button type='button' onclick='cadastrar ()'>CADASTRAR</button>
+    </form>
+
+    <div id='div_mensagem'></div>
+</body>
+</html>
+
+<script>
+    function cadastrar () {
+        var frase;
+
+        if (idade.value >=16 && idade.value <=35 && salario.value >=1000) {
+            frase = 'Cadastro válido';
+        }
+        else {
+            frase = 'Cadastro inválido';
+        }
+    div_mensagem.innerHTML = frase;
+    }
+</script>

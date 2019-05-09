@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Quantas vezes deve ser exibida a frase? <input type='number' id='qtd'><br>
+        <button type='button' onclick='exibir ()'>Exibir</button>
+    </form>
+</body>
+</html>
+<script>
+    function exibir () {
+        var x = Number(qtd.value);
+        for (n = 0; n < x; n++ ) {
+            alert (`Bom dia MENINAS!`);
+        }
+    }
+</script>

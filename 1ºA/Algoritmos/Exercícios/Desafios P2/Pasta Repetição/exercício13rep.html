@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h2>POUPANÇA</h2>
+        Insira seu depósito <input type="number" id="poupanca"><br>
+        meses <input type='number' id='meses'><br>
+        <button type='button' onclick='revelar ()'>Ver Investimento</button>
+        <div id='investimento'></div>
+    </form>
+</body>
+
+</html>
+
+<script>
+    function revelar() {
+        var depositado = Number(poupanca.value);
+        var contador = 1;
+        var mes = Number(meses.value);
+        var x = depositado * 0.05;
+        investimento.innerHTML = '';
+
+
+
+        while (contador <= mes) {
+            contador++;
+            depositado += x;
+            investimento.innerHTML += `${depositado.toFixed(2)} <br>`;
+        }
+
+    }
+</script>

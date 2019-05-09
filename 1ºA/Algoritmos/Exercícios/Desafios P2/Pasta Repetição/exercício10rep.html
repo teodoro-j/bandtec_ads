@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Elevador</h2>
+    Homens <input type='number' id='h'><br>
+    Mulheres <input type='number' id='m'><br>
+    Crianças <input type='number' id='c'><br>
+    <button type='button' onclick=' ilustrar()'>Ilustrar Elevador</button>
+    <div id='elevador' style='border-style: solid; color:chartreuse' >
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    function ilustrar() {
+        elevador.innerHTML = '';
+        var hom = Number(h.value);
+        var mul = Number(m.value);
+        var cri = Number(c.value);
+        var contador = 0;
+
+        while (contador < hom) {
+            contador++;
+            elevador.innerHTML += '<img src="homem.jpg">';
+        }
+        contador = 0;
+
+        while (contador < mul) {
+            contador++;
+            elevador.innerHTML += '<img src="estrela.jpg">';
+        }
+        contador = 0;
+        while (contador < cri) {
+            contador++;
+            elevador.innerHTML += '<img src="crianca.jpg">';
+        }
+        contador = 0;
+
+
+
+
+
+    }
+</script>

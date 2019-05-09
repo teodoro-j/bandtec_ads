@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>Cofrinho Mítico</h2><br>
+        <img id='cofre' src='cofrinho.jpg'><br><br>
+
+        Meta <input type='number' id='meta' value='0'><br>
+        Novo Depósito <input type='number' id='deposito' value='0'><br>
+        Total depositado até agora R$ <b id='valor'> 0 </b><br>
+        <button type='button' onclick='depositar ()'>Depositar</button> <br>
+    
+       
+    </form>
+    <div id='div_mensagem'></div>
+</body>
+</html>
+
+<script>
+    function depositar () {
+        var x = Number(valor.innerHTML) ;
+        x = x + Number(deposito.value) ;
+        valor.innerHTML = x;   // mostrar como mensagem ".innerHTML"
+
+        var cor;  // tem que criar a variavel, e depois referencias no if-else
+        var frase;
+          
+        if ( x >= meta.value) {
+        cor = 'blue';
+        frase = 'Ai sim! Bati a meta!';
+        cofre.src = 'cofre_cheio.jpg'; } 
+     
+        else {
+        cor = 'green';
+        var falta = meta.value - x ;  // criar uma nova variável pra refereciar o quanto falta pra meta
+        frase = `Ainda falta R$${falta.toFixed(2)} para a meta! #focanameta`; }
+
+        div_mensagem.innerHTML = frase;  // colocar as caracteristicas em ação
+        div_mensagem.style.color = cor;  // colocar as caracteristicas em ação
+    }
+</script>
+  
+ 

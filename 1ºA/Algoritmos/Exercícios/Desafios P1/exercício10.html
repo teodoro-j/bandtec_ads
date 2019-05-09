@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2> Desconto do INSS</h2>
+        <input type="text" id='funcionario' placeholder="Seu nome"> <br>
+        <input type='number' id='salario' placeholder="Salário bruto"> <br>
+        <select id='inss'>
+            <option value="">Faixa salarial</option>
+            <option value="0">$0 a $1000</option>
+            <option value="0.1">$1000 a $3000</option>
+            <option value="0.2">Mais de $5000</option>
+        </select>
+        <button type='button' onclick='INSS()'> Calcular Desconto</button>
+    </form>
+    <div id='div_mensagem' style='color: rgb(15, 15, 184)'></div>
+</body>
+</html>
+
+<script>
+    function INSS () {
+        var conta = inss.value*salario.value
+        div_mensagem.innerHTML = `Olá, ${funcionario.value}. Seu desconto de INSS será de R$${conta}. Assim, seu salário líquido será de R$${salario.value-conta}. `;
+
+
+     
+
+
+    }
+
+</script>

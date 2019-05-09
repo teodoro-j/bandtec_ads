@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>SALES</h2>
+        Produto: <input type='text' id='produto'><br>
+        Preço: <input type="number" id='preco'><br>
+        <button type='button' onclick='calcular ()'>Calcular Venda</button>
+        <div id='div_mensagem'></div>
+    </form>
+    
+</body>
+</html>
+
+<script>
+    function calcular () {
+    var x = Number(preco.value) + Number(preco.value) * 0.5;
+    div_mensagem.innerHTML = `O produto ${produto.value} deve ser vendido por RS${x}`;
+    }
+</script>

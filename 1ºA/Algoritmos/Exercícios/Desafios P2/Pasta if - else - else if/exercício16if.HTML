@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>COMEDOR DE FRUTAS vs FASTFOOD</h2>
+        O quanto tu come frutas <input type="number" id='frutas' placeholder="Digite o quanto gosta"><br>
+        O quanto tu come FastFood <input type='number' id='fastfood' placeholder="Digite o quanto gosta"><br>
+        <button type='button' onclick='avaliar ()'>Avaliar Preferencia</button>
+    </form>
+    <div id='div_mensagem'></div>
+</body>
+</html>
+
+<script>
+    function avaliar () {
+        // if (frutas.value == fastfood.value) {
+        //      div_mensagem.innerHTML = 'Você gosta tanto de frutas quanto de fastfood';
+        // }
+        if (frutas.value > fastfood.value){
+            div_mensagem.innerHTML = 'Você gosta mais de frutas';}
+            else {
+                div_mensagem.innerHTML = 'Você gosta mais de fastfood';
+            }
+        }
+ 
+</script>

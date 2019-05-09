@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista 11 - Questão 03</title>
+</head>
+<body>
+    <img src="xena.jpg" onclick="xena()"> Votos: <b id="v_candidato1">0</b><br>
+    <img src="she_ra.jpg" onclick="shera()"> Votos: <b id="v_candidato2">0</b><br>
+    <button type="button" onclick="votar()">Finalizar Votação</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+
+var votos1 = 0;
+var votos2 = 0;
+var x = 'Xena Princesa Guerreira';
+var s = 'Eu sou a She ra';
+
+function xena() {
+    votos1++;
+    atualizarVotos();
+}
+
+function shera() {
+    votos2++;
+    atualizarVotos();
+}
+
+function atualizarVotos() {
+    v_candidato1.innerHTML = votos1;
+    v_candidato2.innerHTML = votos2;
+}
+
+function votar() {
+    if (votos1 != votos2) {
+        var vencedor = votos1>votos2 ? x : s;
+        div_resultado.innerHTML = `${vencedor}`; 
+    }
+}
+
+</script>

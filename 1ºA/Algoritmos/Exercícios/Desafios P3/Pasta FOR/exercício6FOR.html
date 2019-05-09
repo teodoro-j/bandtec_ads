@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button type='button' onclick='amar ()'>Eu amo o 3 e 4!</button>
+    <div id='numeros'></div>
+</body>
+</html>
+
+<script>
+    function amar () {
+        for (n=1; n<=30; n++){
+            if (n % 3 == 0){
+                numeros.innerHTML += `Eu amo 3! <br>`;
+            }
+            if (n % 4 == 0){
+                numeros.innerHTML += `Eu amo 4! <br>`;
+            }
+            if (n % 3 != 0 && n % 4 != 0) {
+                numeros.innerHTML += `${n} <br>`;
+            }
+        }
+    }
+</script>
+ 

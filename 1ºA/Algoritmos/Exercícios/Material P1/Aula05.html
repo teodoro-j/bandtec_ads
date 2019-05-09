@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Definicões Head</title>
+    <!-- o {} entre head, definido como <style> serve para "linkar" 
+        tudo que tiver no body, sendo assim, toda vez que eu usar a tag u, ou p, ou spam, 
+    ele vai buscar as definições pré programadas que estão no head -->
+    <style>
+    p {color: rgba(238, 36, 238, 0.445);
+       font-size: 1em}
+    u {color:teal;}
+    body {padding: 10%;
+          color: pink;}
+    span {background-color: rgb(233, 84, 225);
+    color: rgba(255, 0, 119, 0.178);
+    font-style: italic; /* itálico */
+    font-weight: bold; /* negrito */
+    text-decoration: underline; /* sublinhado */}
+    /* Todas as definições que eu gostaria de ter no corpo, 
+    estão definidas aqui */
+    
+    </style>
+</head>
+<body>
+   <p><h2>  Essa página esta centralizada </h2> </p>
+   <p>Definina no <b>head </b></p>
+   <p><u>Como assim?</u> Foi usada a tag <u>style</u></p> 
+   <p>Com isso, no corpo, só é preciso <span> referenciar </span> as <span> definicões</span></p>
+
+</body>
+</html>

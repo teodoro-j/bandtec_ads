@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Salário: <input type='number' id='salario'><br>
+        Idade: <input type='number' id='idade'><br>
+        <button type='button' onclick='validar()'>Cadastro</button>
+    </form>
+    <div id='div_mensagem'></div>
+</body>
+</html>
+<script>
+    function validar (){ 
+        var frase = salario.value >=1000 && idade.value >=16 && idade.value <=35? "Usuário autenticado":"Usuário não atenticado" ;
+        div_mensagem.innerHTML = frase;
+    }
+
+</script>

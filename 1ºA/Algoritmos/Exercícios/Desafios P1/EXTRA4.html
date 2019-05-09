@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2> POUPANÇA</h2><br>
+        <input type="number" id="deposito"> <br>
+        <input  type="number" id="Valor_total" value="0"><br>
+        <button type="button" onclick="poupanca()"> Poupanca </button>
+    </form>
+
+</body>
+</html>
+
+<script> function poupanca () {
+        var depositado = (deposito.value) * 1;
+        var total = ((Valor_total.value) *1) + ((depositado) * 1 );
+        Valor_total.value = (total) * 1 ;
+
+        /*--usa-se (*1) porque você chama sua variável como número! 
+
+         E PODE FAZER TAMBÉM!!
+        function poupanca () {
+        var depositado = parseInt(deposito.value);
+        var total = parseInt(Valor_total.value) + parseInt(depositado);
+        Valor_total.value = parseInt(total); */
+        
+    }
+
+
+
+
+
+
+
+
+
+
+</script>

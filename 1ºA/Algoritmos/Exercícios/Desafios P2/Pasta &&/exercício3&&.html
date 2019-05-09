@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>COMEMORAR 10 DIAS</h2>
+        Preço do Jantar <input type='number' id='jantar'><br>
+        <button type='button' onclick='verificar ()'>Verificar Orçamento</button>
+    </form>
+    <div id='div_mensagem'></div>
+</body>
+</html>
+
+<script>
+    function verificar () {
+        var frase;
+
+        if (jantar.value <=50) {
+            frase = 'Opa! #partiujantar';}
+
+        else if (jantar.value >120) {
+            frase = 'Vamos esperar pra comemorar 6 meses!';}
+
+        else if (jantar.value >80) {
+            frase = 'Vamos esperar pra comemorar 3 meses';}
+
+        else {
+            frase = 'Vamos esperar pra comemorar 1 mes';}
+    
+    div_mensagem.innerHTML = frase;
+    }
+</script>

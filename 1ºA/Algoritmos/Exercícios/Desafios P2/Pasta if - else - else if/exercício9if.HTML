@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Depositado: <input type='number' id='deposito'><br>
+        Valor Final: <input type='number' id='valor_final' value='0'><br>
+        <button type='button' onclick='depositar ()'>Depositar</button>
+    </form>
+    <img id='image'>
+
+</body>
+</html>
+
+<script>
+    function depositar () {
+        var x = Number(deposito.value) + Number(valor_final.value);
+        valor_final.value = x;
+
+        if (x >4000){
+            image.src='moto.jpg'
+            if (x > 10000) {
+            image.src='carro.jpg'}
+            if (x > 20000) {
+            image.src='carrao.jpg'}
+            if (x > 80000){
+            image.src='casa.jpg'}
+            
+        }
+    }
+</script>

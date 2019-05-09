@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type='number' id='salario' placeholder="Digite seu salário">
+        <input type='number' id='desconto' placeholder="='Digite desconto total'">
+        <select id='ferrou'>
+            <option value='0'>Nenhuma</option>
+            <option value='50'>Leve</option>
+            <option value='100'>Média</option> 
+            <option value='200'> Grave</option>
+            <option value='350'>Gravíssima</option>
+        </select>
+
+        <button type='button' onclick='custo_mensal ()'> Calcular Custo Mensal</button>
+    </form>
+
+    <div id='div_mensagem' style='color: green'></div>
+    
+</body>
+</html>
+
+<script>
+    function custo_mensal () {
+        var sobra = (parseInt(salario.value) - (parseInt (desconto.value) + parseInt(ferrou.value))) ;
+        var porc = 100 - ((sobra * 100)/parseInt(salario.value));
+        div_mensagem.innerHTML = `Walmir ganga R$ ${salario.value} e sobra R$ ${sobra}. Ou seja, ele ganha ${porc}% de seu saláio`;
+    }
+
+
+</script>

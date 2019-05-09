@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h2>APOSENTADORIA</h2>
+        Idade pai:<input type='number' id='pai'><br>
+        Idade mãe:<input type='number' id='mae'><br>
+        <button type='button' onclick="verificar ()">Verificar Aposentadoria</button>
+    </form>
+    <div id='div_pai'></div>
+    <div id='div_mae'></div>
+</body>
+
+</html>
+
+<script>
+    function verificar() {
+        var p = Number(pai.value);
+        var m = Number(mae.value);
+        mostrar_mae(m);
+        mostrar_pai(p);
+    }
+
+    function mostrar_pai(p) {
+        var ap_pai = p - 65;
+        div_pai.innerHTML = `Faltam ${ap_pai} anos para se aposentar`;
+    }
+    function mostrar_mae(m) {
+        var ap_mae = m - 60;
+        div_mae.innerHTML = `Faltam ${ap_mae} anos para se aposentar`;
+    }
+
+
+</script>

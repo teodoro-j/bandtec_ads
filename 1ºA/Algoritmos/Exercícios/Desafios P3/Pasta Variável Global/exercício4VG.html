@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <button type='button' onclick='entrar_h ()'>Entrou um Homem</button>
+        <button type='button' onclick='entrar_m ()'>Entrou uma Mulher</button>
+        <button type='button' onclick='entrar_c ()'>Entrou uma Criança</button>
+        <ul>
+            <li> <b id='hom'>0</b> Homem</li>
+            <li> <b id='mul'>0</b> Mulher</li>
+            <li> <b id='cri'> 0 </b> Criança</li>
+        </ul>
+        Peso Total:<b id='peso_total'> 0</b> KG
+    </form>
+</body>
+
+</html>
+
+<script>
+    var h = 0;
+    var m = 0;
+    var c = 0;
+    var total = 0;
+
+    function entrar_h() {
+        h += 90;
+        hom.innerHTML = h;
+    }
+    function entrar_m() {
+        m += 75
+        mul.innerHTML = m;
+    }
+    function entrar_c() {
+        c += 40
+        cri.innerHTML = c;
+    }
+    // function total() {
+    //     total = h + m + c;
+    //     peso_total.innerHTML = total;
+    // }
+</script>

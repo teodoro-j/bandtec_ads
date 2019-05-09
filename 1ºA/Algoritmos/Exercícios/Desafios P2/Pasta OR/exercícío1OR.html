@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h2> PIZZA D'HORA</h2><br>
+        Selecione o sabor:
+        <select id='pizza'>
+            <option value=''> Escolha um sabor</option>
+            <option value='calabresa'>Calabresa</option>
+            <option value='quatroqueijos'>4 Queijos</option>
+            <option value='portuguesa'>Portuguesa</option>
+            <option value='marguerita'>Marguerita</option>
+        </select> <br>
+        Selecione a restrição:
+        <select id='restricao'>
+            <option value=''>Qual sua restrição</option>
+            <option value='queijo'>Alergico a queijo</option>
+            <option value='palmito'>Alergico a palmito</option>
+            <option value='semrestricao'>Sem restrição</option>
+        </select> <br>
+        <button type='button' onclick='validar_pizza ()'> Validar Pizaa</button>
+    </form>
+    <div id='div_mensagem'></div>
+</body>
+
+</html>
+
+<script>
+    function validar_pizza () {
+        var frase;
+
+         if (restricao.value == 'semrestricao'){
+             frase = 'Eu topo todas!';
+         }
+         else if (restricao.value == 'queijo' && pizza.value != 'calabresa') {
+             frase = 'Não deu, não como quejio!';
+         }
+         else if (restricao.value == 'queijo' && pizza.value == 'calabresa'){
+             frase = 'Calabresa, eu papo!';
+         }
+         else if (restricao.value == 'palmito' && pizza.value == 'calabresa' || pizza.value == 'quatroqueijos') {
+             frase = 'Essas eu papo';
+         }
+         else if (restricao.value == 'palmito' && pizza.value == 'portuguesa' || pizza.value == 'marguerita') {
+             frase = 'Eu não como palmito';
+         }
+       
+        div_mensagem.innerHTML = frase;
+    }
+</script>

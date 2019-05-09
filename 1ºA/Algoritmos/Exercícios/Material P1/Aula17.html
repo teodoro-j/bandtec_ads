@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <H2>Amigos e a Pizza</H2><br>
+    Quantos amigos vão pagar a pizza
+    <input type="number" id="amigos"> <br>
+    Quanto é a pizza
+    <input type="number" id="preco_pizza"> <br>
+    Sabor pizza
+    <input type="text" id="sabor_pizza"><br>
+    <button type="button" onclick="calcular_divisao()"> Calcular Divisao</button>
+
+</form>
+</body>
+</html>
+<script>
+    function calcular_divisao () {
+        var cota_amigo = preco_pizza.value/amigos.value; /* var = VARIÁVEL. Não precisa refazer (nesse caso0 o calculo,
+        porque guardou a formula. reduzindo o código e fazendo ser mais rápido o processamento*/
+        alert (`A pizza de ${sabor_pizza.value} vai sair ${cota_amigo} para cada`);
+    }
+
+
+
+
+</script>

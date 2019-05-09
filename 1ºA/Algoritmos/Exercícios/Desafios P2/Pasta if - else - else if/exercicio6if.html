@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form> 
+        Que nota da para seu atendimento <input type='number' id='star'>
+        <button type='button' onclick="mostrar_estrelas ()">ESTRELAS</button>
+    </form>
+    <div id='div_mensagem'></div>
+        
+</body>
+</html>
+<script>
+    function mostrar_estrelas (){
+        if (star.value <=2) {
+            div_mensagem.innerHTML ='Sua avaliação foi negativa';
+            div_mensagem.style.color = 'red';
+        }
+
+        if (star.value ==3) {
+            div_mensagem.innerHTML ='Sua avaliação foi negativa';
+            div_mensagem.style.color = 'blue';
+        }
+
+        if (star.value >=4 && star.value <=5) {
+            div_mensagem.innerHTML ='Sua avaliação foi negativa';
+            div_mensagem.style.color = 'blue';
+            alert (`Só queria confirmar meus parabéns!`);
+        }
+
+        if (star.value <0) {
+            div_mensagem.innerHTML ='Não existe avaliação menor que 0';
+            div_mensagem.style.color = 'brown';
+        }
+
+        if (star.value >5) {
+            div_mensagem.innerHTML ='Não existe avaliação maior que 5';
+            div_mensagem.style.color = 'brown';
+        }
+
+        }
+    
+</script>

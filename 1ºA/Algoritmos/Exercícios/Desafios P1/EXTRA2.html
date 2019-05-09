@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>Quanto já viveu ...</h2><br>
+
+       Quantos anos tem? <input type="number" id="idade"><br>
+       <button type="button" onclick="tempo_de_vida()"> Calcular dias e meses</button>
+    </form>
+    
+</body>
+</html>
+
+<script>
+    function tempo_de_vida () {
+        var dias = idade.value*365;
+        var meses = idade.value*12;
+        alert (`Sua idade em dias é ${dias} ou em meses ${meses}`); 
+
+
+
+
+    }
+
+</script>

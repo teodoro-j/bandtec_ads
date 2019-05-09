@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h2>Grande Família></h2>
+        Quantos irmãos? <input type='number' id='irmaos'><br>
+        Quantos primos? <input type='number' id='primos'><br>
+        <button type='button' onclick='validar_familia ()'>Analisar Família</button>'
+    </form>
+    <div id='div_mensagem'></div>
+</body>
+
+</html>
+<script>
+    function validar_familia() {
+        var frase;
+        if (irmaos.value >= 3 || primos.value >= 4) {
+            frase = 'É uma grande família';
+        }
+        else {
+            frase = 'Família pequena';
+        }
+
+        div_mensagem.innerHTML = frase;
+
+    }
+</script>

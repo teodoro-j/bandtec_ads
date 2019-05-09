@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oscar 2019</title>
+</head>
+<body backgorund="imagemoscar.jpg" >
+     <form>
+    <h2> Indications to Oscar 2019</h2> <br>
+    <h3>Complete with your dates </h3><br>
+    <input type="text" id="nome" placeholder="Seu nome">
+    <input type="number" id="idade" placeholder="Sua idade"><br>
+    Where are you from?<br>
+    <select>
+        <option value=''>Choose your Country</option>
+        <option value='1'> Brazil</option>
+        <option value='2'>USA</option>
+        <option value='3'>Australia</option>
+        <option value='4'>Angola</option>
+        <option value='5'>Germany</option>
+    </select> <br>
+    <h4>Choose your options to winners Oscar 2019</h4><br>
+    Actriz
+        <input type="radio" name='actriz' id='a'> Lady Gaga
+        <input type="radio" name="actriz" id='b'> Glenn Close
+        <input type="radio" name="actriz" id='c'> Olivia Colman
+    <br>
+    Actor
+        <input type="radio" name="actor" id='d'> Bradley Cooper
+        <input type="radio" name="actor" id='e'> Rami Malek
+        <input tyoe="radio" name="actor" id='f'> Viggo Mortesen
+    <br>
+    Movie
+        <input type="radio" name="movie" id='g'> A star is born
+        <input type="radio"name="movie" id='h'> Bohemian Rhapsody
+        <input type="radio" name="movie"id='i'> Black Panter
+    <br>
+    Director
+        <input type="radio" name="director" id='j'> Allonson Cuaron
+        <input type="radio" name="director"id='k'> Yorgos Lanthimos
+        <input type="radio" name="director" id='l'> Adam McKay
+    <br>
+    <button type="button" onclick="vencedores ()">Finalizar Aposta</button>
+      </form> 
+</body>
+</html>
+<script>
+    function vencedores () {
+        var actriz = a.value;
+        var actor = d.value;
+        var movie = g.value;
+        var director = j.value
+     alert (`If you chose ${a.value} you're rigth!`);
+     alerte (`If you chose ${d.value} you're rigth!`);
+     alerte (`If you chose ${g.value} you're rigth!`);
+     alerte (`If you chose ${j.value} you're rigth!`);
+
+    }
+
+</script>

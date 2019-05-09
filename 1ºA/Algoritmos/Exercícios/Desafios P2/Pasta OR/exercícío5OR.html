@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>Vestibular</h2>
+        Nota Enem <input type='number' id='enem'><br>
+        Nota Prova <input type='number' id='prova'><br>
+        <button type='button' onclick='resultado()'>Vestibular</button>
+    </form>
+    <div id='div_mensagem'></div>
+</body>
+</html>
+<script>
+    function resultado () {
+        var frase;
+        var cor;
+        if (enem.value >=500 || prova.value >=50 ){
+            frase = 'PARABENS, você esta classificado para a próxima fase!';
+            cor = 'blue';
+        }
+        else {
+            frase = 'Bem-vindo, usuário comum!';
+            cor = 'red';
+        }
+        div_mensagem.innerHTML = frase;
+        div_mensagem.style.color = cor;
+    }
+</script>

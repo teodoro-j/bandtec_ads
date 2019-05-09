@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form>
+    Notas 0: <input type="number" id="notas0">
+    <br>
+    Notas 3,5: <input type="number" id="notas35">
+    <br>
+    Notas 5,0: <input type="number" id="notas5">
+    <br>
+    Notas 7,5: <input type="number" id="notas75">
+    <br>
+    Notas 10: <input type="number" id="notas10">
+    <br>
+    <br>
+    <button type="button" onclick="notas()">
+        Analisar
+    </button>
+</form>
+<div id="div_resultado"></div>
+</body>
+</html>
+<script>
+function notas() {
+    var frase;
+    if ((notas0.value/1 + notas35.value/1 + notas5.value/1 + notas75.value/1 + notas10.value/1)==40) {
+        var n10 = Number(notas10.value);
+        if (n10>=0 && n10<=3) {
+            frase = 'Poucos alunos fora da curva';
+        }
+        else if (n10>=4 && n10<=8) {
+            frase = 'Alguns alunos fora da curva';
+        }
+        else if (n10>=9 && n10<=15) {
+            frase = 'Bastante alunos fora da curva';
+        }
+        else {
+            frase = 'Turma da curva';
+        }
+    } else {
+        frase = 'Só podem haver 40 notas de alunos';
+    }
+
+    div_resultado.innerHTML = frase;
+
+}
+</script>

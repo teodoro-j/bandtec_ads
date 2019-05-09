@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Digite seu e-mail<input type='text' id='login'><br>
+        Digite sua senha <input type='password' id='senha'><br>
+        <button type='button' onclick='entrar ()'>ENTRAR</button>
+    </form>
+
+    <div id='div_mensagem'></div>
+</body>
+</html>
+
+<script>
+    function entrar () {
+        var frase;
+        if (login.value == 'amor' && senha.value == 'amor123') {
+            frase = 'Usuário autenticado!';
+        }
+
+        else {
+            frase = 'Falha na autenticação!';
+        }
+        div_mensagem.innerHTML = frase;
+    }
+</script>

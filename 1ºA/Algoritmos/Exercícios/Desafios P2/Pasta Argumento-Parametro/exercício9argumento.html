@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h2>Aluno Bandtec</h2>
+        Média da Continuada <input type='number' id='cont'><br>
+        Média da Integrada <input type='number' id='int'><br>
+        Frequencia <input type='number' id='freq'><br>
+        <button type='button' onclick='calcular()'>Calcular Aprovação</button>
+    </form>
+    <div id='media_geral'></div>
+    <div id='final'></div>
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        unir(cont, int);
+        validar(media_geral.innerHTML, freq.value);
+    }
+
+    function unir(cont, int) {
+        var x = ((Number(cont.value) * 0.4) + (Number(int.value) * 0.6));
+        media_geral.innerHTML = `Sua média é ${x}`;
+    }
+    function validar(media, frequencia) {
+        if (media > 4 && frequencia > 74) {
+            final.innerHTML = `Seu resultado final foi Aprovado`;
+        }
+        else {
+            final.innerHTML = `Seu resultado final foi reprovado`;
+        }
+    }
+        
+</script>

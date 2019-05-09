@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Mostrando e escondendo coisas</h2>
+
+    <div id='div_poesia' style='display: none'> <!-- !none! esconde a div-->
+        Meu coração por ti bate, mais que coração de abacate
+    </div> <br>
+    <button type='button' onclick='mostrar()'>Mostrar</button>
+    <button type="button" onclick='esconder()'> Esconder</button>
+</body>
+</html>
+
+<script>
+    function mostrar () {
+        div_poesia.style.display='inline'
+    }
+
+    function esconder () {
+    div_poesia.style.display='none'
+
+    }
+
+</script>

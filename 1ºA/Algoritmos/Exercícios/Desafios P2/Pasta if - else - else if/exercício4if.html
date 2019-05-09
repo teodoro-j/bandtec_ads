@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  <!-- informa os caracteres como acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2> Notas do Semestre </h2>
+         Prova Contiuada <input type='number' id='continuada' placeholder="Digite sua Nota"><br>
+         Prova Integrada <input type='number' id='integrada' placeholder='Digite sua Nota'><br>
+         <button type='button' onclick="calcular ()">Calcular Média</button>
+    </form>
+    
+    <div id='div_mensagem1' style='color: green'></div>
+    <div id='div_mensagem2' style='color: purple'></div>
+       
+</body>
+</html>
+
+<script>
+    function calcular (){
+        var media = ((Number(continuada.value) * 0.4)  + (Number(integrada.value) * 0.6));
+        if (media > 4.9) {
+            div_mensagem1.innerHTML = '#PartiuEstagio';
+            div_mensagem2.style.display='none';
+            div_mensagem1.style.display='inline';
+            }
+        else {
+            div_mensagem2.innerHTML = '#TenteOutraVez';
+            div_mensagem1.style.display='none';
+            div_mensagem2.style.display='inline';
+            }
+        
+    }
+</script>

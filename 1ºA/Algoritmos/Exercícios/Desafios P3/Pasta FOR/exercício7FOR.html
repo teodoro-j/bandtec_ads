@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body> <form>
+    Nota de avaliação <input type='number' id='notas'><br>
+    <button type='button' onclick='ilustrar ()'>Ilustrar Avaliação</button>
+    <div id='estrelas'></div>
+    </form>
+</body>
+</html>
+
+<script>
+    function ilustrar () {
+        var x = Number(notas.value)
+        if (x < 1 || x > 5) {
+            alert (`Valor inválido. Só aceito entre 1 e 5!`)
+        }
+        else {
+            estrelas.innerHTML ='';
+            for (n = 0; n < x; n++){
+                estrelas.innerHTML += '<img src="estrela.jpg">';
+            }
+        }
+    }
+</script>

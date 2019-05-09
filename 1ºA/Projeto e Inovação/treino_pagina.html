@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("mosaico.jpeg");
+            color: cornsilk;
+        }
+
+        form {
+            text-align: center;
+            font-family: arial;
+        }
+
+        h2 {
+            padding-top: 5px;
+        }
+
+        #card {
+            border-radius: 10px;
+            margin-top: 17%;
+            margin-left: 30%;
+            margin-right: 30%;
+            padding-bottom: 50px;
+            padding-top: 15px;
+            padding-left: 40px;
+            padding-right: 40px;
+            /* background-color: rgba(255, 127, 80, 0.472); */
+             background-color: rgba(222, 184, 135, 0.450); 
+        }
+
+        #login {
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        #senha {
+            border-radius: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.649);
+            color: cornsilk;
+        }
+        a {
+            color: cornsilk;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div id='card'>
+
+            <h2>LOGIN</h2>
+            usuário <input type='text' id='login'><br>
+            senha <input type='password' id='senha'><br>
+            <button type='button' onclick='validar_login()'>Entrar</button><br><br>
+            <a href="http://br.linkedin.com">esqueceu senha</a>
+            <a href="http://www.digitalschool.com.br/faculdade/">fazer cadastro</a>
+        </div>
+    </form>
+</body>
+
+</html>
+
+<script>
+    function validar_login() {
+        if (login.value == '' || senha.value == '') {
+            alert (`É necessário colocar um usuário e senha cadastrado`);
+            }
+        else if (login.value == 'teodoro' || senha.value== 'j1o2a3o4') {
+window.location = "https://www.google.com/";
+        }  
+    }
+</script>

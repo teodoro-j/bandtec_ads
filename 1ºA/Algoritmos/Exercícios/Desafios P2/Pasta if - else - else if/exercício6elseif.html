@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>AVALIE O ATENDIMENTO</h2>
+        Qual a nota da sua avaliação <input type='number' id='nota'> <br>
+    <button type='button' onclick='avaliar ()' >Avaliar</button>'
+    </form>
+    <div id='div_mensagem'></div>
+    
+</body>
+</html>
+
+<script>
+    function avaliar () {
+        var frase;
+        var cor;
+
+        if (nota.value <0) {
+            frase = 'Não existe avaliação menor que 0!';
+            cor = 'rgb(165, 33, 33)';}
+
+        else if (nota.value >5) {
+            frase = 'Não existe avaliação maior que 5!'
+            cor = 'rgb(165, 33, 33)';}
+
+        else if (nota.value >=4) {
+            frase = 'Sua avaliação foi positiva';
+            cor= 'blue';
+            alert (`Só queria confirmar meus parabéns!`); }
+
+        else if (nota.value == 3) {
+            frase = 'Sua avaliação foi neutra' ;
+            cor = 'gray';}
+
+        else {
+            frase = 'Sua avaliação foi negativa' ;
+            cor = 'red';}
+          
+        div_mensagem.innerHTML = frase;
+        div_mensagem.style.color = cor;
+    }
+</script>

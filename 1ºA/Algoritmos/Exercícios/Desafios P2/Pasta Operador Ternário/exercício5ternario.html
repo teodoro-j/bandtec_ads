@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Quantos irmaos? <input type='number' id='irmaos'><br>
+        Quanto primos? <input type='number' id='primos'><br>
+        <button type='button' onclick='validar()'>Validar família</button>
+        <div id='div_mensagem'></div>
+    </form>
+
+</body>
+</html>
+
+<script>
+    function validar() {
+        var frase = irmaos.value >=3 || primos.value >=4? "É uma grande família":"Família pequena" ;
+
+        div_mensagem.innerHTML = frase;
+    }
+</script>

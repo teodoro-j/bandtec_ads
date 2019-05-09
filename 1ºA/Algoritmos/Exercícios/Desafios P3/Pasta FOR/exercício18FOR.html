@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista 09 - questão 09</title>
+</head>
+
+<body>
+    <form>
+        Fatorar: <input type="number" id="fatorar"><br>
+        <button type="button" onclick="calcular()">Fatoração</button><br>
+        <div id="fator"></div>
+        <div id='resultado'></div>
+    </form>
+
+</body>
+
+</html>
+
+
+<script>
+    function calcular() {
+        var f = Number(fatorar.value);
+        var x = f;
+        fator.innerHTML = '';
+        for (n = f; n >= 2; n--) {
+            x *= n-1;
+            fator.innerHTML += `${n}x`;
+        }
+        fator.innerHTML += `1 =${x}`;
+
+    }
+</script>

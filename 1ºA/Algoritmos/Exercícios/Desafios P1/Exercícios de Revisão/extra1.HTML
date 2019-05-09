@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>ELIAS O NUTRICIONISTA</h2>
+        Quantas bananas? <input type='number' id='banana' placeholder="Digite a quantidade de bananas"><br>
+        Quantos pães com manteiga? <input type='number' id='pao' placeholder="Digite a quatidade de pão com manteiga"> <br>
+        Quantos copos de Café com Leite? <input type='number' id='cafe' placeholder="Digite a quantidade de café com leite"><br>
+        <button type='button' onclick='calcular ()'>Calcular Calorias</button>
+        <div id='div_mensagem'></div>
+    </form>
+    
+</body>
+</html>
+
+<script>
+    function calcular () {
+        var x = (Number(banana.value) * 20) + (Number(pao.value) * 80) + (Number(cafe.value) * 30);
+        div_mensagem.innertHTML = `Sua dieta com ${banana.value} bananas, ${pao.value} pães com manteiga e 
+        ${cafe.value} copos de café com leite vai te fornecer ${x} calorias`;
+
+    }
+
+</script>

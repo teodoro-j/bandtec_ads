@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Idade: <input type='number' id='idade' placeholder="Digite seu nome"> <br>
+        Quantos filhos: <input type='number' id='filhos' placeholder="Quantidade de filhos"> <br> 
+        <button type='button' onclick='calcular ()'>Calcular Vida</button>
+    </form>
+    <div id='div_vida'></div>
+
+</body>
+</html>
+
+<script>
+    function calcular () {
+        if (idade.value <18){
+            div_vida.innerHTML = 'Você é menor de idade';
+            if (idade.value <14) {
+                div_vida.innerHTML = div_vida.innerHTML + '<br>Você é praticamente uma criança'}
+            if (filhos.value >0) {
+                div_vida.innerHTML = div_vida.innerHTML + '<br> Nossa, começou cedo, hein :O'
+            }
+        }
+        else {
+                div_vida.innerHTML = 'Você é maior de idade';
+            if (filhos.value >3 ){
+                div_vida.innerHTML = div_vida.innerHTML  + '<br> Não tem TV nem internet em casa?'}
+                else {
+                if (filhos.value >0)
+                div_vida.innerHTML = div_vida.innerHTML + '<br> Parabéns pelos filhos'} 
+                }
+        }
+        
+    }
+</script>

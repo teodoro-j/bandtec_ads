@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>Sociólogo ajuda os Pobres</h2>
+        Renda do pai <input type='number' id='pai' placeholder="Digite a renda"><br>
+        Renda da mãe <input type="number" id='mae' placeholder="Digite a renda"><br>
+        Renda dos avós <input type="number" id='avos' placeholder="Digite a renda"><br>
+        <button type="button" onclick="verificar ()">Verificar situação Social</button>
+        <br>
+        <div id='div_mensagem'></div>
+    </form>
+</body>
+</html>
+
+<script>
+    function verificar () {
+        var x = Number(pai.value) + Number(mae.value) + Number(avos.value);
+        if (x < 150.55) {
+            div_mensagem.innerHTML = 'Renda abaixo da linda da pobreza';
+        }
+        else {
+            div_mensagem.innerHTML ='Cadastro realizado com sucesso';
+        }
+    }
+</script>

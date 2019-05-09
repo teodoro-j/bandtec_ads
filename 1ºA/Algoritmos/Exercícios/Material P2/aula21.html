@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Sua idade <input type='number' id='idade'> <br>
+        <button type='button' onclick="votar()">Votação </button>
+
+    </form>
+
+        <div id='div_votacao'></div>
+    
+</body>
+</html>
+
+<script>
+    function votar() {
+        // Se idade for igual a 16
+        if (idade.value >=16) {   
+        div_votacao.innerHTML = `Você ja pode votar `;}
+         else {
+         div_votacao.innerHTML = ` Ainda não pode votar `;}
+    }
+</script>

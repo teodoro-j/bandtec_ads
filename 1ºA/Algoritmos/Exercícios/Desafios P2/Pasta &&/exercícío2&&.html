@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2> DIMINUA SEU COLESTEROL</h2>
+        Quantas horas de exercícios diários? <input type='number' id='diario'><br>
+        Quantos dias pratica? <input type='number' id='semana'><br>
+        <button type='button' onclick='calcular ()'> Calcular Saúde</button>
+    </form>
+    <div id='div_mensagem'></div>
+</body>
+</html>
+
+<script>
+    function calcular () {
+        var frase;
+        var semanal = Number(semana.value) * Number(diario.value);
+
+        if (diario.value <=8 && semanal <=8) {
+            frase = 'Assim não vai ficar bom tão cedo!!';}
+        
+        else if (diario.value >16 && semanal >16) {
+            frase = 'Calma não pode exagerar';}
+
+        else if (diario.value >=13 && semanal >= 13) {
+            frase = 'Esta muito bem!';}
+
+        else {
+            frase = 'Está no caminho, mas precisa melhorar!';}
+
+    div_mensagem.innerHTML = frase; 
+    }
+
+</script>

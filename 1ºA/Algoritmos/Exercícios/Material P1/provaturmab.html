@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type='text' id='frase' placeholder="Digite uma frase"><br>
+        <input type='text' id='cor1' style='color: red'>;
+        <input type='text' id='cor2' style='color:rgba(255, 0, 0, 0.616)'>;
+        <input type='text' id='cor3' style='color: rgba(221, 11, 11, 0.726)'>;
+
+        <button type='button' onclick="corone()"> VER NA COR 1</button>
+        <button type='button' onclick="cortwo()"> VER NA COR 2</button>
+        <button type='button' onclick="corthree()"> VER NA COR 3</button>
+
+        <!-- <div id='div_mensagem1' style='color: red'></div>
+        <div id='div_mensagem2' style='color: rgba(255, 0, 0, 0.616)'></div>
+        <div id='div_mensagem3' style='color: rgba(221, 11, 11, 0.726)'></div> -->
+    </form>
+    
+</body>
+</html>
+
+<script>
+    function corone () {
+        
+        cor1.value= frase.value;
+
+    }
+    function cortwo () {
+       
+        cor2.value= frase.value;
+    
+    }
+
+    function corthree () {
+        cor3.value = frase.value;
+        
+    }
+
+
+   
+
+</script>

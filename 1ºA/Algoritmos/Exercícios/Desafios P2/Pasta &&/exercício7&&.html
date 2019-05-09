@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2> Avalie seu app</h2>
+    <img src='star_white.png' id='um' onclick='mudar(1)'>
+    <img src='star_white.png' id='dois' onclick='mudar(2)'>
+    <img src='star_white.png' id='tres' onclick='mudar(3)'>
+    <img src='star_white.png' id='quatro' onclick='mudar(4)'>
+    <img src='star_white.png' id='cinco' onclick='mudar(5)'>
+
+    <span id='nota' style='display:none'></span>
+    <span id='qtd' style='display:none'>0</span>
+
+    <br>
+    Média Atual: <b id='media'>0</b>
+    <br>
+    Situação atual: <b id='atual'>Indefinida</b>
+    <br>
+    <button type='button' onclick='validar ()'>Confirmar Voto</button>
+</body>
+
+</html>
+
+<script>
+    function mudar(estrelas) {
+        var notas = Number(nota.innerHTML);
+        var qtn = Number(qtd.innerHTML);
+        qtn++;
+
+        if (estrelas == 1) {
+            um.src = "star_yellow.png";
+            dois.src = "star_white.png";
+            tres.src = "star_white.png";
+            quatro.src = "star_white.png";
+            cinco.src = "star_white.png";
+
+        }
+        else if (estrelas == 5) {
+            um.src = "star_yellow.png";
+            dois.src = "star_yellow.png";
+            tres.src = "star_yellow.png";
+            quatro.src = "star_yellow.png";
+            cinco.src = "star_yellow.png";
+            notas += 10;
+        }
+        else if (estrelas == 4) {
+            um.src = "star_yellow.png";
+            dois.src = "star_yellow.png";
+            tres.src = "star_yellow.png";
+            quatro.src = "star_yellow.png";
+            cinco.src = "star_white.png";
+            notas += 7.5;
+        }
+        else if (estrelas == 3) {
+            um.src = "star_yellow.png";
+            dois.src = "star_yellow.png";
+            tres.src = "star_yellow.png";
+            quatro.src = "star_white.png";
+            cinco.src = "star_white.png";
+            notas += 5;
+        }
+        else {
+            um.src = "star_yellow.png";
+            dois.src = "star_yellow.png";
+            tres.src = "star_white.png";
+            quatro.src = "star_white.png";
+            cinco.src = "star_white.png";
+            notas += 2.5;
+        }
+        nota.innerHTML = notas;
+        qtd.innerHTML= qtn;
+    }
+
+    function validar() {
+        var med = (Number(nota.innerHTML)/ Number(qtd.innerHTML));
+        media.innerHTML = med;
+
+        if (med <= 4.8) {
+            atual.innerHTML = `Não aprovado`;
+        }
+        else if (med > 7) {
+            atual.innerHTML = `Aprovado`;
+        }
+        else if (med >= 5.2 && med <= 7) {
+            atual.innerHTML = `Aprovado com restrições`;
+        }
+        else {
+            atual.innerHTML = `Neutro`;
+        }
+    }
+</script>

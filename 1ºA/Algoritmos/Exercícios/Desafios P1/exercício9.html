@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>Informações</h2>
+        <br>
+        <input type='text' id='aluno' placeholder="Seu nome"><br>
+        <input type="number" id='nota1' placeholder="Digite sua nota 1"><br>
+        <input type="number" id='nota2' placeholder="Digite sua nota 2"><br>
+        <input type="number" id='nota3' placeholder="Digite sua nota 3"><br>
+        <button type='button' onclick='calcular()'> Calcular Nota pra Passar </button>
+    
+    </form>
+
+    <div id='div_mensagem' style='color:rgb(168, 2, 2)'></div>
+    
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var x = (5-(((Number(nota1.value) + Number(nota2.value) + Number(nota3.value))/3)*0.4))/0.6;
+        div_mensagem.innerHTML = `Ola ${aluno.value}, você precisa tirar ${x.toFixed(2)} na integrada!`;
+    }
+
+
+
+
+</script>

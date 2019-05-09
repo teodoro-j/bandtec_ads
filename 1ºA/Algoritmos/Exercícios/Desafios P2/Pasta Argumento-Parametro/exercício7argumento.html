@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h2>Comprar Ovos de Pácoa é desperdício</h2>
+        Preço do ovo <input type='number' id='preco_ovo'><Br>
+        Peso do ovo (g) <input type='number' id='peso_ovo'><Br>
+        Preço da barra <input type='number' id='preco_barra'><br>
+        Peso da barra (g) <input type='number' id='peso_barra'><Br>
+        Preço da caixa de bombons <input type='number' id='preco_caixa'><br>
+        Peso da caisa (g) <input type='number' id='peso_caixa'><br>
+        <button type='button' onclick='calcular()'>Calcular</button>
+    </form>
+    <div id='ovo'></div>
+    <div id='barra'></div>
+    <div id='caixa'></div>
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        ovinho(peso_ovo, preco_ovo, ovo);
+        ovinho(peso_barra, preco_barra, barra);
+        ovinho(peso_caixa, preco_caixa, caixa);
+    }
+    function ovinho(peso, preco, local) {
+        var x = (Number(peso.value) * Number(preco.value) / 500);
+        var frase = `A cada 500g do ovo, ele sair por ${x}`;
+        local.innerHTML = frase;
+    }
+
+</script>

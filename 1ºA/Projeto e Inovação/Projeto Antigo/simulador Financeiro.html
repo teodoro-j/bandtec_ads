@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simulador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="simulador">
+
+<div class="fundo2"></div>
+
+<div>
+<div class="menu"> <a href="index.html">
+Menu</a>
+</div>
+<div class="graficos">Simulador Finaceiro</div>  
+</div>
+
+<div class="textos"> <!-- ENGLOBA TUDO -->
+
+<br> <br> 
+<p></p>
+<h2>Vamos economizar!</h2>
+
+<div> Com nosso sistema de <b>Controle e Temperatura de Umidade</b> conseguimos evitar maiores <i>deteorizações </i>, faça aqui a sua cotação de quando você gasta por ano com restaurações, e também o quanto <u>economizará</u>
+com corte de gastos para a mesma</div> <p></p>
+
+<form>
+
+<h2>Cotação de pinturas para restauração:</h2> <br>
+
+Quantidade de pinturas:<br>
+<input placeholder="Digite a Quantidade" type="number" id="pinturas" autofocus></input> <p></p>
+Valor pago para restauração:<br>
+<input placeholder="Digite o Valor" type="number" id="restauraçao"></input> <p></p>
+<button type="button" onclick ="calculo()">Calcular</button> <p></p>
+<div id="mensagem" style="color:blue;"></div>
+</form>
+
+</div> <!-- ENGLOBA TUDO -->
+
+</body>
+</html>
+
+<script>
+function calculo(){
+    var calculo= (pinturas.value *restauraçao.value) *12;
+ var economia= calculo *0.20
+    mensagem.innerHTML = `Você gasta R$${calculo.toFixed(2)} 
+    por ano em restaurações e com o nosso sistema você irá gastar apenas R$${economia.toFixed(2)}`;   
+}
+</script>

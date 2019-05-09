@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Digite seu nome <input type='text' id='nome' ><br>
+        Digite sua renda <input type='number' id='renda'><br>
+        <button type='button' onclick='validar ()'>Validar</button>
+    </form>
+    <div id='div_mensagem'></div>
+
+</body>
+</html>
+
+<script>
+    function validar () {
+        var x = nome.value.length;
+        var frase;
+        if ( x >=4 && renda.value >=0 && renda.value <=200 ) {
+            frase = 'Tem direito a bolsa família'
+        }
+        else {
+            frase = 'Não tem direito'
+        }
+
+        div_mensagem.innerHTML = frase;
+    }
+</script>
+
+

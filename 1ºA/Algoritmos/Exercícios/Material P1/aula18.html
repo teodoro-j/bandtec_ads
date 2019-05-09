@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h2> Funções de conversões de números e exibição ma Página</h2>
+    <form>
+
+     1ª Nota <input type='number' id='nota1' autofocus> <br> <!-- serve pro campos ja estiver com o cursor já selecionado -->
+     2ª Nota <input type='number' id='nota2'> <br>
+     <button type='button' onclick='calcular_media ()'>Calcular Média</button>
+
+    </form>
+
+
+    <!-- Para aparecer a mensagem na tela -->
+    <div id='div_mensagem' style='color: rgb(20, 131, 20)'></div>
+    
+</body>
+</html>
+<script>
+    function calcular_media () {
+
+         var media = Number(nota1.value) + Number(nota2.value)/ 2;
+         div_mensagem.innerHTML = `Sua nota é ${media}`;
+
+
+
+/* Para converter letra em número no JS, ao invés de multiplicar o valor por 1 ou subtrair por 0
+        pode usar a função number
+         */
+
+    }
+
+</script>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #imagens {
+
+            height: 200px;
+            width: 330px;
+
+        }
+
+        #pessoa {
+            height: 200px;
+            width: 330px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <img src="normal.jpg" id="pessoa"><br><br>
+    <img src="cima.jpg" id="imagens" onclick="sobe()">
+    <img src="baixo.jpg" id="imagens" onclick="desce()"><br><br>
+
+    <h2>Cotação do dólar: R$ <b id="b_total">4.00</b></h2><br>
+
+    <div id="div_mensagem"></div>
+
+
+</body>
+
+</html>
+<script>
+    function sobe() {
+        var total = Number(b_total.innerHTML);
+        total = total + 0.25;
+        b_total.innerHTML = total;
+
+        if (total>=0.01 && total<=0.99) {
+            pessoa.src= "superdesesperada.jpg"
+        }
+
+        if (total>=1 && total<=1.99) {
+            pessoa.src= "desesperada.jpg"
+        }
+
+        if (total>=2 && total<=2.99) {
+            pessoa.src= "nervosa.jpg"
+        }
+
+        if (total>=3 && total<=4.99) {
+            pessoa.src= "normal.jpg"
+        }
+
+        if (total>=5 && total<=5.99) {
+            pessoa.src= "feliz.jpg" 
+        } 
+        if (total>6) {
+            pessoa.src= "ostentação.jpg"
+        }
+
+    }
+
+    function desce() {
+        var frase;
+        var total = Number(b_total.innerHTML);
+        total = total - 0.25;
+        b_total.innerHTML = total;
+        if (total>=0.01 && total<=0.99) {
+            pessoa.src= "superdesesperada.jpg"
+        }
+
+        if (total>=1 && total<=1.99) {
+            pessoa.src= "nervosa.jpg"
+        }
+
+        if (total>=2 && total<=2.99) {
+            pessoa.src= "desesperada.jpg"
+        }
+
+        if (total>=3 && total<=4.99) {
+            pessoa.src= "normal.jpg"
+        }
+
+        if (total>=5 && total<=5.99) {
+            pessoa.src= "feliz.jpg" 
+        } 
+        if (total>6) {
+            pessoa.src= "ostentação.jpg"
+        }
+
+
+        if (total < 0.01) {
+            frase = "Não existe essa cotação";
+        } 
+        if (total >= 0.01) {
+            frase = "";
+        }
+
+
+        div_mensagem.innerHTML = frase;
+    }
+
+
+
+
+
+
+</script>

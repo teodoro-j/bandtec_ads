@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    VOTOS DO SEU ZÉ <b id='homem'> 0 </b>
+    VOTOS DA MARIA <b id='mulher'> 0 </b> <br>
+    <button type='button' onclick=' votar(homem)'>Votos Zé</button><br>
+    <button type='button' onclick=votar(mulher)>Votos Maria</button>
+</body>
+
+</html>
+
+<script>
+    function votar(totoso) {
+        var votos = Number(totoso.innerHTML);
+        votos ++;
+        totoso.innerHTML = votos
+    }
+</script>

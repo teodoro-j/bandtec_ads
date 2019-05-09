@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type='button' onclick='ver(1)'>Ver Pares</button>
+    <button type='button' onclick='ver (2)'>Ver Impares</button>
+    <ul>
+        <div id='resultado'></div>
+    </ul>
+</body>
+
+</html>
+
+<script>
+    function ver(n) {
+        if (n == 1) {
+            resultado.innerHTML = '';
+            var par = 10;
+            while (par <= 40) {
+                if (par % 2 == 0) {
+                    resultado.innerHTML += `<li> ${par} </li>`;
+                }
+                par++;
+            }
+         
+
+        }
+        else {
+            resultado.innerHTML = '';
+            var impar = 30;
+            while (impar <=50){
+                if (impar % 2 != 0) {
+                    resultado.innerHTML += `<li> ${impar} </li>`;
+                }
+                impar++;
+            }
+        }
+    }
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula15</title>
+</head>
+<body>
+    <h2>P[ágina com Programação</h2>
+<br>
+<form>
+<input type="text" id="nome" placeholder="Seu nome">
+<br>
+<input type="text" id="idade" placeholder="Sua Idade">
+<br>
+<Button type="button" onclick="experimentar()"> Experimenta </Button> <!-- onclick serve para
+tirar a necessidade de carregar a página toda vez e apenas preencher o formulário-->
+
+</form>
+
+</body>
+</html>
+<!--Colocaremos instruções em JS-->
+<script>
+    function experimentar () {
+        alert ('estou aprendendo a programar');
+        alert ('Mas aprendo rápido');
+        alert (`o título da Página é ${document.title}`);
+        alert (`o seu nome é ${nome.value} Teodoro`); /* Coloca-se "nome.value", porque
+        vocÊ chama o id (nome) que inscreveu */
+        alert (` o seu nome é ${nome.value} e tem ${idade.value} anos`); /* igual no alert anterior,
+        tu chamou o id (idade) que nomeou e citou na caixa (com o ".value"), alem do nome */
+
+
+
+        
+        
+
+
+
+    
+    }
+
+
+
+</script>

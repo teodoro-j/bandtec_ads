@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class='esc'>
+        <img id='a' src='fogo.jpg' style='display: none'>
+        <img id='b' src='ar.jpg' style='display: none'>
+        <img id='c' src='terra.jpg'>
+        <img id='d' src='agua.jpg' style='display: none'>
+    </div>
+
+    <br><br>
+    <h2> ESCOLHA O ELEMENTO </h2>
+    <select id='elemento' onchange="amostrar(elemento.value)">
+        <option value='a'>fogo</option>
+        <option value='b'>ar</option>
+        <option value='c'>terra</option>
+        <option value='d'>agua</option>
+    </select><br>
+
+
+</body>
+
+</html>
+
+<script>
+    function amostrar(mostrar) {
+        a.style.display = 'none';
+        b.style.display = 'none';
+        c.style.display = 'none';
+        d.style.display = 'none';
+        mostrar.style.display = 'inline';
+    }
+</script>

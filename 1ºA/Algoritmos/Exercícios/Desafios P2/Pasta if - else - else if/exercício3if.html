@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h2>RENDA FAMILIAR</h2>
+        <form>
+            Salário Pai<input type='number' id='pai'><br>
+            Salária Mãe<input type='number' id='mae'><br>
+            <button type='button' onclick='verificar_bolsa()'>Verificar Bolsa Família</button>
+        </form>
+            <div id='div_mensagem1' style='color: blue'></div>
+            <div id='div_mensagem2' style='color:brown'></div>
+    
+    </body>
+    </html>
+    
+    <script>
+        function verificar_bolsa () {
+            if ((Number(pai.value) + Number(mae.value)) < 250.70) {
+            div_mensagem1.innerHTML = 'Você tem direito ao Programa' ;
+            div_mensagem2.style.display='none';
+            div_mensagem1.style.display='inline';}
+            else {
+            div_mensagem2.innerHTML = 'Você não tem direito ao Programa' ;
+            div_mensagem1.style.display='none';
+            div_mensagem2.style.display='inline';}
+        }
+
+        // function verificar_bolsa () {
+            // if ((Number(pai.value) + Number(mae.value)) < 250.70) {
+            // div_mensagem1.innerHTML = 'Você tem direito ao Programa' ;
+            // div_mensagem2.innerHTML = ' ';
+        // }
+            // else {
+            // div_mensagem2.innerHTML = 'Você não tem direito ao Programa' ;
+            // div_mensagem1.innerHTML = ' ';
+        //    }
+        // }
+
+     </script>
+
+     

@@ -1,0 +1,55 @@
+<!--
+ Crie um programa que avalie se o usuário é feliz.
+ Ele deve informar a quantidade de amigos de verdade que tem 
+ e a quantidade de desejos que já realizou na vida
+ 
+ Deve haver um botão "Sou feliz?"
+
+ Caso ele tenho pelo menos 4 amigos ou 2 desejos realizados,
+ exiba "Parabéns, você é feliz". Caso contrário, exiba 
+ "Hum... Precisa de mais para ser feliz".
+
+-->
+
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sou feliz?</title>
+</head>
+<body>
+<form>
+    Quantos amigos de verdade possui? 
+    <input type="number" id="amigos">
+    
+    <br>
+    
+    Quantos desejos já realizou? 
+    <input type="number" id="desejos">
+
+    <br><br>
+
+    <button type="button" onclick="felicidade()">
+        Sou feliz?</button>
+</form>
+<div id="div_resultado"></div>    
+</body>
+</html>
+
+<script>
+function felicidade() {
+    var v_amigos = Number(amigos.value);
+    var v_desejos = Number(desejos.value);
+
+    var frase;
+    if (v_amigos >= 4 || v_desejos >=2) {
+        frase = 'Parabéns, você é feliz';
+    } else {
+        frase = 'Hum... Precisa de mais para ser feliz';
+    }
+
+    div_resultado.innerHTML = frase;
+}
+</script>

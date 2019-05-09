@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2> Manifesto Ágil</h2>
+        Nome:<input type='text'id='a' placeholder="Seu nome" autofocus> <br>
+        Item:<select id='agilidade'>
+            <option value=''>Escolha</option>
+            <option value='mais indivíduos e interações e menos processo e processo e ferremantas' > Processo e ferramenta</option>
+            <option value='mais softwares em funionamento e menos documentação abrangente' > Documentação abrangente</option>
+            <option value='mais colaboração com o cliente e menos negociação de contratos' > Negociação de contratos</option>
+            <option value='mais responder a mudanças e menos seguir um plano' > Seguir um plano</option>
+        </select>
+        <br>
+        <button type='button' onclick="partiu_agilidade()">#partiuagilidade</button>
+    </form>
+    
+    <div id='div_mensagem' style='color: rgb(71, 46, 62); margin-top: 25px'></div>
+
+
+</body>
+</html>
+<script>
+    function partiu_agilidade() {
+        var frase = `Então ${a.value}, ${agilidade.value}`;
+        div_mensagem.innerHTML = frase;
+
+}
+
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+       Quantas vezes quer que repita? <input type='number' id='vezes'><br>
+       <button type='button' onclick="verificar ()">Exibir</button>
+    </form>
+</body>
+</html>
+
+<script>
+    function verificar () {
+        var contador = 0;
+        var n = Number(vezes.value);
+
+        while (contador < n ){
+            contador ++
+            alert (`Olá mundo! ${contador}`);
+        }
+    }
+</script>
