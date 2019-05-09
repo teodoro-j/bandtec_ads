@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #A {
+            float: left;
+            margin-left: 25%;
+        }
+
+        #B {
+            float: right;
+            margin-right: 25%;
+        }
+        button {
+            margin-top: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div id='A'>
+
+        <h2>Time A</h2>
+        Nome: <input type='text' id='nome1'><br>
+        vitórias: <input type='number' id='vitorias_a'><br>
+        Empate: <input type='number' id='empate_a'><br>
+        Derrotas: <input type='number' id='derrota_a'><br>
+        </div>
+
+        <div id='B'>
+
+        <h2>Time B</h2>
+        Nome: <Input type='text' id='nome2'><br>
+        vitórias: <input type='number' id='vitorias_b'><br>
+        Empate: <input type='number' id='empate_b'><br>
+        Derrotas: <input type='number' id='derrota_b'><br>
+        </div>
+        <button type='button' onclick='analisar ()'>Analisar</button>
+        <div id='resultado'></div>
+    </form>
+   
+</body>
+
+</html>
+<script>
+    function analisar () {
+        var timeA = { v: 0, e: 0, d: 0 }
+        timeA.v = Number(vitorias_a.value);
+        timeA.e = Number(empate_a.value);
+        timeA.d = Number(derrota_a.value);
+
+        var timeB = { v: 0, e: 0, d: 0 }
+        timeB.v = Number(vitorias_b.value);
+        timeB.e = Number(empate_b.value);
+        timeB.d = Number(derrota_b.value);
+
+        var pontos = {v:3, e:1, d:0};
+        var pontosA = timeA.v*pontos.v + timeA.e*pontos.e + timeA.d*pontos.d;
+        var pontosB = timeB.v*pontos.v + timeB.e*pontos.e + timeB.d*pontos.d;
+ 
+        resultado.innerHTML = ` O ${nome1.value} terminou com ${pontosA} pontos
+         e o ${nome2.value} terminou com ${pontosB} pontos`;
+
+    }
+</script>

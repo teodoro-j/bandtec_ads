@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        vitórias: <input type='number' id='vitorias'><br>
+        Empate: <input type='number' id='empate'><br>
+        Derrotas: <input type='number' id='derrota'><br>
+        <button type='button' onclick='analisar ()'>Analisar</button>
+        <div id='resultado'></div>
+    </form>
+</body>
+</html>
+<script>
+    function analisar () {
+        var campanha = {v:0, e:0, d:0};
+        campanha.v = Number(vitorias.value);
+        campanha.e = Number(empate.value);
+        campanha.d = Number(derrota.value);
+
+        //                 OU
+        // var campanha = {
+        //     v: Number(vitoria.value),
+        //     e: Number(empate.value),
+        //     d: Number(derrota.value)
+        // }
+
+        var pontos = {v:3, e:1, d:0}
+        var pontos = campanha.v*pontos.v + campanha.e*pontos.e + campanha.d*pontos.d;
+
+        resultado.innerHTML = ` O time terminou com ${pontos}pontos`;
+    }
+
+    
+</script>
