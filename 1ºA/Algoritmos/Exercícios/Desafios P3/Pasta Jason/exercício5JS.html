@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h2>Poupança</h2>
+        Saldo <b id='saldo'> 0 </b> <br>
+        Depósito <b id='deposito'> 0 </b> <br>
+        Saques <b id='saques'> 0 </b> <br>
+        <button type='button' onclick='depositar ()'>Depositar 100</button>
+        <button type='button' onclick='sacar ()'>Sacar 20</button>
+    </form>
+
+</body>
+
+</html>
+
+<script>
+  var banco = {s:0, d:0, sq:0};
+
+    function depositar() {
+        banco.s += 100;
+        banco.d++;
+        saldo.innerHTML = banco.s; 
+        deposito.innerHTML = banco.d;
+    }
+    function sacar() {
+        banco.s -=20;
+        banco.sq++;
+        saldo.innerHTML = banco.s; 
+        saques.innerHTML = banco.sq;
+    }
+</script>

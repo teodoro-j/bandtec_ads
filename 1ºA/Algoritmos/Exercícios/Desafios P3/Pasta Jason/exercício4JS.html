@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h2>Busca CEP
+        </h2>
+        CEP: <input type='text' id='cep'><br>
+        <button type='button' onclick='encontrar ()'> Encontrar Endereço</button> <br>
+        <div id='resultado'></div>
+    </form>
+</body>
+
+</html>
+<script>
+    function encontrar () {
+        var endereco1 =  {'c':'09185-420', 'r':'Evaristo de Moraes', 'a':'Casa João'};
+        var endereco2 = {'c':'03067-000', 'r':'Teixeira de Melo', 'a':'Casa Bianca'};
+
+        if (cep.value == endereco1.c){
+            resultado.innerHTML = `${endereco1.c} | ${endereco1.r} | ${endereco1.a}| `;
+        }  
+        else if (cep,value == endereco2.c) {
+            resultado.innerHTML = `${endereco2.c} | ${endereco1.r} | ${endereco1.a}|`;
+        }
+        else {
+            resultado.innerHTML = `CEP NÃO ENCONTRADO!!`;
+        }
+    }
+</script>

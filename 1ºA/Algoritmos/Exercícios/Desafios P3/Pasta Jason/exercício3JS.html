@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>Olimpiadas</h2>
+        Nome <input type='text' id='pais'><br>
+        Medalhas Ouro: <input type='number' id='ouro'><br>
+        Medalhas Prata: <input type='number' id='prata'><br>
+        Medalhar Bronze: <input type='number' id='bronze'><br>
+        <button type='button' onclick='analisar ()'> Analisar Medalhas</button><br>
+        <div id='resultado'></div>
+    </form>
+</body>
+</html>
+<script>
+    function analisar () {
+        var olimp = {o:0, p:0, b:0}
+        olimp.o = Number(ouro.value);
+        olimp.p = Number(prata.value);
+        olimp.b = Number(bronze.value);
+
+        var pontos = {o:10000, p:100, b:1};
+        var pontos = olimp.o*pontos.o + olimp.p*pontos.p + olimp.b*pontos.b;
+
+        resultado.innerHTML = `O ${pais.value} tem ${pontos} pontos nessa Olimpíada!!`;
+    }
+</script>
