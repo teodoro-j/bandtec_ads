@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            height: 200px;
+         } 
+    </style>
+</head>
+<body>
+    <form>
+        <h2>DragonBall</h2>
+        <img src='goku.png' id='img_goku'><br>
+        <button type='button' onclick='treinar ()'>Treinar</button>
+    </form>
+</body>
+</html>
+<script>
+    var treino = 0
+    function treinar () {
+        treino++;
+        if (treino ==4 ) {
+            img_goku.src = "goku1.jpg";
+        }
+        else if (treino ==6) {
+            img_goku.src = 'goku2.png';
+        }
+        else if (treino ==10) {
+            img_goku.src = 'goku3.jpg';
+        }
+        else if (treino ==14) {
+            img_goku.src = 'goku4.jpg';
+        }
+        else if (treino ==20) {
+            img_goku.src = 'goku5.jpg';
+        }
+    }
+</script>

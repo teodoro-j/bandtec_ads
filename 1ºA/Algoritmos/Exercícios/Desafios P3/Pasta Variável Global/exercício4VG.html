@@ -31,19 +31,22 @@
     var total = 0;
 
     function entrar_h() {
-        h += 90;
-        hom.innerHTML = h;
+        h++;
+        hom.innerHTML = `${h}`;
+        total +=90;
+        peso_total.innerHTML = `${total}`;
     }
     function entrar_m() {
-        m += 75
-        mul.innerHTML = m;
+        m++;
+        mul.innerHTML = `${m}`;
+        total +=75;
+        peso_total.innerHTML = `${total}`;
     }
     function entrar_c() {
-        c += 40
-        cri.innerHTML = c;
+        c++;
+        cri.innerHTML = `${c}`;
+        total +=40;
+        peso_total.innerHTML = `${total}`;
     }
-    // function total() {
-    //     total = h + m + c;
-    //     peso_total.innerHTML = total;
-    // }
+   
 </script>
