@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Um filme que você gosta muito: <input type='text' id='novo_filme'><br>
+        <button type='button' onclick='cadastrar()'>Cadastrar Filme</button> 
+        <button type='button' onclick='ver_historico()'>Ver Favoritos</button><br>
+    </form>
+    <div id='div_filmes'></div>
+</body>
+</html>
+<script>
+    var filmes = [];
+
+    function cadastrar(){
+        filmes.push(novo_filme.value);
+    }
+
+    function ver_historico() {
+        var texto = `Filmes: ${filmes}`;
+        texto += `<br> Total: ${filmes.length}`;
+        div_filmes.innerHTML=texto;
+    }
+
+</script>
