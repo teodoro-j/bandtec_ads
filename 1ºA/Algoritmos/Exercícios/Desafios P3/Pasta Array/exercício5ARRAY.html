@@ -13,7 +13,6 @@
         <h2>FILMES</h2>
         Novo Filme: <input type='text' id='filme'><br>
         <button type='button' onclick='cadastrar ()'>Cadastrar</button><br>
-        <div id='filmes_nomes'></div>
         Pesquisar <input type='text' id='pesquisa'><br>
         <button type='button' onclick='pesquisar ()'>Pesquisar</button>
         <div id='mensagem'></div>
@@ -25,18 +24,22 @@
     var filmes = []
     function cadastrar() {
         filmes.push(filme.value);
-        filmes_nomes.innerHTML = '';
-        for (indice = 0; indice < filmes.length; indice++) {
-            filmes_nomes.innerHTML += `${filmes[indice]}<br>`;
-        }
     }
-    function pesquisar() {
-        if (filme.value == filmes) {
-            mensagem.innerHTML = "Você gosta desse filme";}
-        else if (filme.value != filmes) {
-            mensagem.innerHTML = "Você não curte esse filme";
 
+    function pesquisar() {
+        var achar = 0
+        for (indice = 0; indice < filmes.length; indice++) {
+            if (filmes[indice] == pesquisa.value) {
+                achar++
+            }
         }
-           mensagem.innerHTML ='';
+
+        if (achar > 0) {
+            mensagem.innerHTML = "Você gosta desse filme";
+        }
+        else {
+            mensagem.innerHTML = "Você não curte esse filme";
+        }
     }
+
 </script>
