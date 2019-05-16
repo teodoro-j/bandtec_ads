@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista 13, questão 06</title>
+</head>
+
+<body>
+    <form>
+
+        Novo CEP: <input id="novo_cep"> <br>
+        Novo Endereço: <input id="novo_endereco"> <br>
+        Novo Apelido: <input id="novo_apelido"> <br>
+        <button type="button" onclick="cadastrar()"> Cadastrar</button>
+        <br>
+        Pesquise por CEP: <input id="cep_pesquisa"> <br>
+        <button type="button" onclick="pesquisar()"> Pesquisar</button><br>
+    </form>
+    <div id="resultado"></div>
+</body>
+
+</html>
+<script>
+
+    var ceps_cadastrados = [];
+
+    function cadastrar() {
+        var cep = {
+            cep: novo_cep.value,
+            endereco_completo: novo_endereco.value,
+            apelido: novo_apelido.value
+        };
+        ceps_cadastrados.push(cep);
+    }
+
+    function pesquisar() {
+
+        var achou = 0;
+
+        for (c=0; c<ceps_cadastrados.length; c++) {
+            var cep_atual = ceps_cadastrados[c];
+            if (cep_atual.cep == cep_pesquisa.value) {
+                achou++;
+                resultado.innerHTML = `Endereço <b>${cep_atual.apelido}</b>: ${cep_atual.endereco_completo}, cep: ${cep_atual.cep}`;
+            }
+        }
+
+        if (achou==0) {
+            resultado.innerHTML = `CEP não encontrado`;
+        }
+
+    }
+</script>
