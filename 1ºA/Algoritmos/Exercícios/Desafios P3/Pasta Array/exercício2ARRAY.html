@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        Onde viajou: <input type='text' id='viagem'><br>
+        <button type='button' onclick='cadastrar()'>Cadastrar Local</button><br>
+        Insira um número <input type='number' id='numero_viagem'><br>
+        <button type='button' onclick='relembrar()'>Relembrar Viagem</button><br>
+    </form>
+    <div id='div_viagem'></div>
+</body>
+
+</html>
+<script>
+    var viajar = [];
+
+    function cadastrar() {
+        viajar.push (viagem.value);
+    }
+    function relembrar() {
+        if (numero_viagem.value<=viajar.length) {
+            div_viagem.innerHTML = '';
+            div_viagem.innerHTML += `Local: ${viajar[Number(numero_viagem.value) - 1]}`;
+        }
+        else {
+            div_viagem.innerHTML = `Voce não fez viagem a ${numero_viagem.value} viagem`;
+        }
+    }
+
+</script>
