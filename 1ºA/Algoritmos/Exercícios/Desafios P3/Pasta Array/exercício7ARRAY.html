@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        insira um número <input type='number' id='numero'><br>
+        <button type='button' onclick='registrar ()'>Registrar</button>
+        <button type='button' onclick='ver_número ()'>Ver número separados</button>
+        <div id='mostrar'></div>
+    </form>
+</body>
+
+</html>
+
+<script>
+    var par = [];
+    var impar = [];
+    var n = Number(numero.value);
+    function registrar() {
+        par.push(n);
+        impar.push(n);
+    }
+    function ver_numero() {
+        mostrar.innerHTML = '';
+        for (num % 2 == 0; num <par.length; num++) {
+                mostrar.innerHTML +=`${par[num]}<br>`;
+            }
+        
+        for (nu % 2 !=0; nu< impar.length; nu++) {
+                mostrar.innerHTML +=`${impar[nu]}<br>`
+            }        
+        }
+    
+</script>

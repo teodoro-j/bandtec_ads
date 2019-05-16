@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <select id='pessoa'>
+            <option value='homem'>HOMEM</option>
+            <option value='estrela'>MULHER</option>
+            <option value='crianca'>CRIANÇA</option>
+        </select><br>
+        <button type='button' onclick='registrar()'>Entrar no Elevador</button>
+        <button type='button' onclick='ver_elevador()'>Mostrar</button>
+        <div id='elevador'></div>
+    </form>
+</body>
+</html>
+<script>
+    var pessoas = [];
+    function registrar () {
+        pessoas.push(pessoa.value);
+    }
+    function ver_elevador (){
+        elevador.innerHTML= '';
+        for (indice = 0; indice < pessoas.length; indice++){
+            elevador.innerHTML += `<img src="${pessoas[indice]}.jpg">`;
+        }
+        for (indice = 0; indice < pessoas.length; indice++){
+            elevador.innerHTML += `<img src="${pessoas[indice]}.jpg">`;
+        }
+        for (indice = 0; indice < pessoas.length; indice++){
+            elevador.innerHTML += `<img src="${pessoas[indice]}.jpg">`;
+        }
+    }
+</script>s
