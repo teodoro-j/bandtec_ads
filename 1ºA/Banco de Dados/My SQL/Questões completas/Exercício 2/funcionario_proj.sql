@@ -40,6 +40,15 @@ localProj varchar (45),
 fkDepto int,
 foreign key (fkDepto) references departamento (idDepto));
 
+
+insert into projeto values 
+(1, 'produto x', 'santo andre', 015),
+(2, 'projeto y', 'itu', 015),
+(3, 'projeto z', 'sao paulo', 015),
+(10, 'informacao', 'maua', 104),
+(20, 'reorganizacao', 'sao paulo', 101),
+(30, 'beneficios', 'maua',  104);
+
 create table FuncProf (
 fkFunc int,
 foreign key (fkFunc) references funcionarios (idFunc),
@@ -47,3 +56,21 @@ fkProj int,
 foreign key (fkProj) references projeto (idProj),
 primary key (fkFunc, fkProj),
 hora decimal (3.1));
+
+insert into funcProf values 
+(1,3,12.5),
+(1,2,7.50),
+(5,3,40.0),
+(6,1,20.0),
+(6,2,20.0),
+(2,2,10.0),
+(2,3,10.0),
+(2,10,10.0),
+(2,20,10.0),
+(3,30,30.0),
+(3,10,10.0),
+(7,10,35.0),
+(7, 30,5.00),
+(4,30,20.0),
+(4,20,15.0),
+(8,20,null);
