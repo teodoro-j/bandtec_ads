@@ -88,11 +88,6 @@ and fkGrupo=idGrupo and idGrupo=1;
 select * from professor join grupo join grupoProfessor on fkProf=idProf and fkGrupo=idGrupo and idGrupo=1;
 
 select * from grupo join grupoProfessor on fkGrupo=idGrupo and fkProf=10000;
- 
- select distinct a.aluno from aluno as a join grupoProfessor join professor on fkProf=idProf
- join grupo on  a.fkGrupo=idGrupo where idProf=10000;
- 
--- SELECTE 13 E 14 DUVIDAS1!!!
 
 select count(distinct nota) as 'qtd de notas distintas' from grupoProfessor;
 

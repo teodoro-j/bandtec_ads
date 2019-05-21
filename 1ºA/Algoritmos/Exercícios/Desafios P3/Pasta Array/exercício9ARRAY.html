@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>LINHA DE ONIBUS</h2>
+        Linha de Onibus: <input type='text' id='linha'><br>
+        <button type='button' onclick='cadastrar ()'>Cadastrar Linha</button><br>
+        Pesquisar Linha: <input type='text' id='linha_pesquisa'><br>
+        <button type='button' onclick='pesquisar ()'>Pesquisar Linha</button>
+        <div id='mensagem_linha'></div>
+    </form>
+</body>
+</html>
+<script>
+    function cadastrar () {
+        var linhas = []
+        linhas.push(linha);
+    }
+    function pesquisar () {
+        var achou = 0;
+        for (l = 0; l < linhas.length; l++) {
+            var linhas_usadas = linhas[l];
+            if (linhas_usadas >=2 ) {
+               mensagem_linha.innerHTML = `Você já pegou essa linha ${linhas[1]} vezes!!`;
+               if (linhas_usadas >=4) {
+                   mensagem_linhas.innerHTML = `Você já pegou essa linha ${linhas[3]} vezes!!`;
+                   if (linhas_usadas >=8) {
+                       mensagem_linhas.innerHTML = `Você já pegou essa linha ${linhas[7]} vezes`;
+                       if (linhas_usadas >=9) {
+                           mensagem_linhas.innerHTML = `Você já pegou essa linha ${linhas[8]} vezes`
+                       }
+                   }
+               }
+            }
+        }
+        if (linhas_usadas == 0) {
+               mensagem_linha.innerHTML = `Você nunca pegou essa linha!!`;}
+    }
+</script>
