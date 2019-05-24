@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 9</title>
+
+    <style>
+        *{
+            font-family: Arial, sans-serif;            
+            box-sizing: border-box;
+        }
+
+        label{
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        input,
+        button {
+            display: block; 
+            width:200px;
+            padding: 10px 15px;
+            margin: 15px 0px;
+        }
+    </style>
+
+</head>
+<body>
+    <form>
+        <label>Digite o nome das linhas de ônibus usada:</label>
+        
+        <input type="text" id="linha">
+       
+        <button type="button" onclick="gravar_linhas()">Cadastrar</button>
+        <di id="resu"></di>
+        
+        <label>Pesquisar:</label>
+        
+        <input type="text" id="linha_pesquisa">
+      
+        <button type="button" onclick="pesquisar()">Pesquisar</button>
+        <div id="pesquisado"></div>
+    </form>
+</body>
+</html>
+
+<script>
+    var linhas_onibus = [];
+
+    function gravar_linhas(){
+        linhas_onibus.push(linha.value);
+    }
+
+    function pesquisar(){
+        var cont = 0;
+        var ordem = [];
+        
+        for(r = 0; r < linhas_onibus.length; r++){
+           var termo = linha_pesquisa.value.toLowerCase();
+           var onibus = linhas_onibus[r].toLowerCase();
+
+           if(termo ==  onibus){
+               cont++;
+               ordem.push(r+1);
+           }
+        }
+
+        if(cont > 0) {
+            pesquisado.innerHTML = `Você já pegou essa linha ${cont} vezes, nessa ordem: ${ordem}` ;
+        }
+        else {
+            pesquisado.innerHTML = 'Você nunca pegou essa linha ';
+        } 
+    }
+
+</script>

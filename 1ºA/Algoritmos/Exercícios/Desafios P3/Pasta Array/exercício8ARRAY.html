@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <form>
         <select id='pessoa'>
@@ -15,25 +17,47 @@
         </select><br>
         <button type='button' onclick='registrar()'>Entrar no Elevador</button>
         <button type='button' onclick='ver_elevador()'>Mostrar</button>
+        <div id='v_elevador'></div>
         <div id='elevador'></div>
-    </form>
+
 </body>
+
 </html>
 <script>
     var pessoas = [];
-    function registrar () {
+    function registrar() {
         pessoas.push(pessoa.value);
     }
-    function ver_elevador (){
-        elevador.innerHTML= '';
-        for (indice = 0; indice < pessoas.length; indice++){
-            elevador.innerHTML += `<img src="${pessoas[indice]}.jpg">`;
+    function ver_elevador() {
+        foto = '';
+        for (p = 0; p < pessoas.length; p++) {
+            var img = '';
+            if (pessoas[p] == 'homem') {
+                img = 'homem.jpg';
+            }
+            else if (pessoas[p] == 'estrela'){
+                img = 'estrela.jpg';
+            }
+            else {
+                img = 'crianca.jpg';
+            }
+        foto += `<img src='${img}'>`;
         }
-        for (indice = 0; indice < pessoas.length; indice++){
-            elevador.innerHTML += `<img src="${pessoas[indice]}.jpg">`;
+        ver_texto ();
+        v_elevador.innerHTML = foto;
+    }
+    
+    function ver_texto() {
+        var frase = `A 1ª foi uma/um ${pessoas[0]}.<br>`;
+        
+        if(pessoas.length >= 4) {
+            frase += `A 4ª foi uma/um ${pessoas[3]}.<br>`
         }
-        for (indice = 0; indice < pessoas.length; indice++){
-            elevador.innerHTML += `<img src="${pessoas[indice]}.jpg">`;
+        if(pessoas.length >= 7) {
+            frase += `A 7ª foi uma/um ${pessoas[6]}.<br>`
         }
+
+        frase += `A última pessoa foi uma/um ${pessoas[pessoas.length-1]}.`;
+        elevador.innerHTML = frase;
     }
 </script>

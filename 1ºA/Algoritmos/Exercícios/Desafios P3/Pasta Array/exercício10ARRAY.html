@@ -11,17 +11,35 @@
       Informe um número: <input type='number' id='numero'><br>
       <button type='button' onclick='cadastrar ()'>Cadastrar Número</button><br>
       <button type='button' onclick='exibir ()'> Exibir Todos</button>
-      <div id='div_maior'></div>
-      <div id='div_menor'></div>
+      <div id='div_n'></div>
     </form>
 </body>
 </html>
 <script>
+     var numeros = []
     function cadastrar (){
-        var numeros = []
-        numeros.push(numero);
+        numeros.push(Number(numero.value));
+        numero.focus();
     }
     function exibir () {
-        
+        var itens = '';
+
+        var maior = 0;
+        var menor = 0;
+
+        for (n = 0; n < numeros.length; n++){
+            itens += `<li>${numeros[n]}</li>`;
+
+            if(numeros[n] > maior){
+                maior = numeros[n];
+            }
+            if (numeros[n] < menor){
+                menor = numeros[n];
+            }
+        }
+        div_n.innerHTML = `<ol>${itens}</ol>`;
+        div_n.innerHTML += `<p>O maior número cadastrado foi: <b>${maior}</b></p>`;
+        div_n.innerHTML += `<p>O menor número cadastrado foi: <b>${menor}</b></p>`;
+    
     }
 </script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Digite um número:</label>
+        <input type="text" id="numero" autofocus>
+
+        <button type="button" onclick="registrar()">Registrar</button>
+        
+        <button type="button" onclick="separar()">Ver números separados</button>
+        
+        <div id="resu"></div>
+    </form>
+</body>
+</html>
+
+<script>
+    var num = [];
+    
+    function registrar() {
+        num.push(Number(numero.value));
+    }
+
+    function separar() {
+        
+        var listaPares = '';
+        var listaImpares = '';
+
+        for(r = 0; r< num.length; r++){
+            if(num[r] % 2 == 0) {
+                listaPares += `<p>${num[r]}</p>`;
+            } 
+            else {
+                listaImpares += `<p>${num[r]}</p>`;  
+            }
+        }
+        
+        resu.innerHTML = `<h3>Impares</h3> ${listaImpares} <h3>Pares</h3> ${listaPares}`;
+    }
+</script>

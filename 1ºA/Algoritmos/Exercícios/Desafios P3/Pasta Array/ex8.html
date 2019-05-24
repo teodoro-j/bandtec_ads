@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+            *{
+                font-family: Arial, sans-serif;            
+                box-sizing: border-box;
+            }
+    
+            label{
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+    
+            img {
+                width: 100px;
+            }
+
+            input,
+            button, 
+            select {
+                display: block; 
+                width:200px;
+                padding: 10px 15px;
+                margin: 15px 0px;
+            }
+
+            #elevador_texto {
+                margin: 20px 0px;
+            }
+    </style>
+</head>
+<body>
+    <form>
+        <select id="tipo_pessoa" autofocus>
+            <option select disabled>Pessoa</option>
+            <option value="mulher">Mulher</option>
+            <option value="homem">Homem</option>
+            <option value="criança">Criança</option>
+        </select>
+
+        <button type="button" onclick="entrar()">Entrar no elevador</button>
+        <button type="button" onclick="ver()">Ver elevador</button>
+
+        <div id="elevador_texto"></div>
+        <div id="elevador"></div>
+    </form>
+</body>
+</html>
+
+<script>
+    var pessoas = []
+
+    function entrar() {
+        pessoas.push(tipo_pessoa.value);
+    }
+
+    function ver() {
+        var imagens = '';
+
+        for(r = 0; r < pessoas.length; r++) {
+            var img = '';
+
+            if(pessoas[r] == 'mulher') {
+                img = 'mulher.png';
+            } 
+            else if (pessoas[r] == 'homem') {
+                img = 'homem.png';
+            } else {
+                img = 'crianca.png';
+            }
+
+            imagens += `<img src='${img}'>`;
+        }
+        ver_texto();
+        elevador.innerHTML = imagens;
+    }
+
+    function ver_texto() {
+        var frase = `A 1ª foi uma/um ${pessoas[0]}.<br>`;
+        
+        if(pessoas.length >= 4) {
+            frase += `A 4ª foi uma/um ${pessoas[3]}.<br>`
+        }
+        if(pessoas.length >= 7) {
+            frase += `A 7ª foi uma/um ${pessoas[6]}.<br>`
+        }
+
+        frase += `A última pessoa foi uma/um ${pessoas[pessoas.length-1]}.`;
+        elevador_texto.innerHTML = frase;
+    }
+
+
+</script>

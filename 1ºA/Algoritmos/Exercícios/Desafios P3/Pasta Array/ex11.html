@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 11</title>
+
+    <style>
+        #lilás {
+            background-color: plum;
+        }
+
+        #amarela {
+            background-color: yellow;
+        }
+
+        #vermelha {
+            background-color: red;
+        }
+
+        #verde {
+            background-color: green;
+        }
+
+        #azul {
+            background-color: rgb(27, 181, 253);
+        }
+
+        img {
+            width:7%
+        }
+    </style>
+</head>
+<body>
+    <form>
+
+        <label>Informe a linha de metrô:</label>
+        <input type="text" id="linha_usuario">
+
+        <button type="button" onclick="cadastrar()">Cadastrar</button>
+
+        <button type="button" onclick="relatar()">Relatório</button>
+
+        <div id="resultado"></div>
+    </form>
+</body>
+</html>
+
+<script>
+
+    var linhas_existentes = ['azul', 'verde', 'vermelha', 'amarela', 'lilás'];
+    var linhas_inseridas = [];
+    var contador = 0;
+
+    var linhas_total = [0, 0, 0, 0, 0]
+    
+    function validar() {
+        contador = 0;
+        for(r = 0; r < linhas_existentes.length; r++){
+            if(linhas_existentes[r] == linha_usuario.value){
+                contador++;
+            }
+        }
+    }
+
+    function cadastrar() {
+        validar();
+        resultado.innerHTML = '';
+
+        if(contador != 0 ) {
+            linhas_inseridas.push(linha_usuario.value);
+        }
+        else {
+            resultado.innerHTML = 'Linha não existe. Cadastro inválido.'
+        }
+    }
+
+    function relatar() {
+        resultado.innerHTML = '';
+        linhas_total = [0, 0, 0, 0, 0];
+        verificar_vezes();
+        imaginar();
+        verificar_maior();
+    }
+
+    function verificar_maior() {
+        var linha = '';
+        var maior = 0;
+        for(r = 0; r < linhas_total.length; r++){
+            if(linhas_total[r] > maior){
+                maior = linhas_total[r];
+                linha = linhas_existentes[r];
+            }
+        }
+        
+        resultado.innerHTML += `A linha que você mais pegou foi a ${linha} (${maior} vezes)`;
+    }
+
+    
+
+    function verificar_vezes() {
+        for(r = 0; r < linhas_inseridas.length; r++) {
+            if(linhas_inseridas[r] == 'azul'){
+                linhas_total[0]++;
+            } 
+            else if(linhas_inseridas[r] == 'verde'){
+                linhas_total[1]++;
+            }
+            else if(linhas_inseridas[r] == 'vermelha'){
+                linhas_total[2]++;
+            }
+            else if(linhas_inseridas[r] == 'amarela'){
+                linhas_total[3]++;
+            }
+            else{
+                linhas_total[4]++;
+            }
+        }
+    }
+
+    function imaginar(){
+        var imagem = '';
+        for(i = 0; i < linhas_total.length; i++){
+            imagem = '';
+            for(r = 0; r < linhas_total[i]; r++){
+                imagem += `<img src='train.png'>`;
+            }
+            resultado.innerHTML += `<div id='${linhas_existentes[i]}'>${imagem}</div>`;
+        }
+    }
+</script>
