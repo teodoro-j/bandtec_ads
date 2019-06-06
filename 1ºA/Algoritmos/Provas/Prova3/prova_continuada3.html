@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2> Viagem Interestelar</h2>
+        Nome: <input type='text' id='nome'><br>
+        Viagem: <input type='text' id='viagem'><br>
+        Quantidade de dias: <input type='number' id='dias'><br>
+        Quantidade de horas: <input type='number' id='horas'><br>
+        Quantidade de minutos: <input type='number' id='minutos'><br>
+        <button type='button' onclick='registrar()'>Registrar Viagem</button>
+        <button type='button' onclick='relatar()'> Relatório de Viagem</button>
+        <div id='resultado_viagem'></div>
+    </form>
+</body>
+</html>
+<script>
+    var viagens = [];
+
+    function registrar () {
+        var viajar = 0;
+        for (v = 0; v < viagens; v++){
+            if (Number(dias.value) > 0 || Number(horas.value) > 0 || Number(minutos.value)) {
+                viajar++;
+            } 
+            else {
+            alert('Informe um tempo de viagem válido!')}
+        }
+    }
+</script>

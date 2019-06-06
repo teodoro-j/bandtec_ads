@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tentativa3</title>
+</head>
+<body>
+    <form>
+        <h2> Viagem Interestelar</h2>
+        Nome: <input type='text' id='nome'><br>
+        Viagem: <input type='text' id='viagem'><br>
+        Quantidade de dias: <input type='number' id='dias'><br>
+        Quantidade de horas: <input type='number' id='horas'><br>
+        Quantidade de minutos: <input type='number' id='minutos'><br>
+        <button type='button' onlick='registrar'>Registrar Viagem</button>
+        <button type='button' onclik='relatar'> Relatório de Viagem</button>
+        <div id='resultado_viagem'></div>
+        <div id='tempo_viagem'></div>
+        <div id='mais_tempo'></div>
+     </form>
+</body>
+</html>
+
+<script>
+    var viagens_tempo = [Number(dias.value), Number(horas.value), Number(minutos.value)];
+    var tempo_real =  [0,0,0];
+    var viagens = [];
+    // calculo de dias e horas em minutos
+    var tempo = (Number(dias.value)*1440) + 
+        (Number(horas.value)*60) + (Number(minutos.value));
+
+    function registrar () {
+        var viajar = 0;
+        for (v= 0; v < viagens_tempo.length; v++){
+            if (viagens_tempo[v] <= 0 ){
+                alert('Informe um tempo de viagem válido!');
+            }
+            else {
+               viajar ++; 
+               tempo_real[v]++;
+            }
+        }
+    }
+    function relatar () {
+        foto = '';
+        for (v = 0; v <tempo_real.length; v++) {
+            var img = '';
+            if (tempo < parseInt(525600)) {
+                img = 'bebe.png';
+            }
+            else if (tempo > parseInt(4,73e+7)){
+                img = '90.png';
+            }
+            else if (tempo> parseInt(2,365e+7)) {
+                img = '45.png';
+            }
+            else if (tempo > parseInt(1,577e+7)){
+                img = '30.png';
+            }
+            else if (tempo> parseInt(6,833e+6)) { 
+                img = '13.png';
+            }
+            else {
+                img = '12.png';
+            }
+            foto += `<img src='${img}'><br>`;
+        }
+        ver_texto ();
+        resultado_viagem.innerHTML = foto;
+    }
+    function ver_texto() {
+        // Converter os minutos=horas em anos
+        var tempo_terra = tempo/8760;
+        var viagem_registrada = viagens[viajar];
+
+        for (v= 0; v < viagens.length; v++) {
+
+        tempo_viagem.innerHTML += `<br> Astronauta ${nome} ficou fora por pelo 
+        menos ${tempo_terra} anos no tempo da Terra.` 
+
+        mais_tempo.innerHTML = `<br> O astronauta que passou mais tempo foi o ${nome.value}, 
+        que ficou pelo menos ${tempo_terra} anos no tempo da Terra viajando. 
+        Essa foi a ${viagem_registrada} viagem registrada.`;
+
+        tempo_viagem.innerHTML = '';
+        mais_tempo.innerHTML = '';
+        }
+    }
+</script>

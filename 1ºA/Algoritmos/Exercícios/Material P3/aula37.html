@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite uma palavra <input type='text' id='palavra'><br>
+    <button type='button' onclick='salvar()'>Salvar</button>
+    <div id='palavra_salva'></div>
+</body>
+
+</html>
+
+<script>
+    var palavras = [];
+    function salvar() {
+        if (palavras.length == 0) {
+            palavras.push(palavra.value);
+        }
+        else {
+            var achou = 0;
+            for (p = 0; p < palavra.length; p++) {
+                if (palavras[p] == palavra.value) {
+                    alert(`Opa já cadastrada!`);
+                    achou++;
+                    break;
+                }
+            }
+            if (achou == 0) {
+                palavras.push(palavra.value);
+            }
+        }
+        palavra_salva.innerHTML += `Cadastrada ${palavra.value}<br>`;
+    }
+
+</script>

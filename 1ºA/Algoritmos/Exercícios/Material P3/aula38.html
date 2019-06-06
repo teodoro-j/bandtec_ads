@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type='button' onclick='ir()'>VAI!!!</button>
+    <div id='mensagens'></div>
+</body>
+
+</html>
+
+<script>
+    function ir() {
+        mensagens.innerHTML = '';
+        setInterval(function() {
+            mensagens.innerHTML += `Juntos e Shallow Now<p>`
+        }, 1000);
+        setInterval(function() {
+            mensagens.innerHTML += `É nois!<p>`
+        }, 2000);
+
+        setTimeout(function () {
+            mensagens.innerHTML += `Hulk esmaga!<p>`
+        }, 3000);
+
+        mensagens.innerHTML += `Bom dia!<br>`;
+        mensagens.innerHTML += `Bom tarde!<br>`;
+        mensagens.innerHTML += `Bom noite!<br>`;
+    }
+</script>

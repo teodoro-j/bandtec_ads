@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type='button' onclick='ir()'>VAI!!!</button>
+    <div id='mensagens'></div>
+</body>
+
+</html>
+
+<script>
+    function ir() {
+        mensagens.innerHTML = ``
+        // setInterval(saudar, 2000);
+        // setInterval(despedir, 3000);
+    };
+
+    function saudar() {
+        mensagens.innerHTML += `Olá, boa tarde!`;
+    };
+
+    function despedir() {
+        mensagens.innerHTML += `Foi um prazer, até logo!`
+    };
+    setInterval(saudar, 2000);
+        setInterval(despedir, 3000);
+</script>

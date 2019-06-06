@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type='button' onclick='ir()'>VAI!!!</button>
+    <div id='mensagens'></div>
+</body>
+
+</html>
+
+<script>
+    // De forma assícrona vamos fazer o usuário comer 3 frutas e 2 proteínas
+    let frutas = 0;
+    
+    function ir() {
+        mensagens.innerHTML = ``
+        comer_fruta();
+
+    }
+
+    function comer_fruta() {
+        mensagens.innerHTML += `Comer uma fruta<p>`;
+        frutas++
+         if (frutas<3){
+             setTimeout(comer_fruta, 2000);
+         }
+    };
+
+    function comer_proteina() {
+        mensagens.innerHTML += `Comer proteína!<p>`
+    };
+
+</script>
