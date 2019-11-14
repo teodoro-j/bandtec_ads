@@ -1,0 +1,22 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 25 Sep 2019 20:21:21 at http://html.codedthemes.com/datta-able/bootstrap/default/dashboard-crypto.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://html.codedthemes.com/datta-able/bootstrap/default/dashboard-crypto.html -O1 "C:\Users\Cleitom\Desktop\site\.systemplate" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+20:27:29	Error: 	"Not Found" (404) at link html.codedthemes.com/datta-able/bootstrap/default/maint-coming-soon.html (from html.codedthemes.com/datta-able/bootstrap/default/dashboard-crypto.html)
+20:29:17	Error: 	"Forbidden" (403) at link https://www.mapbox.com/files/assets/data/realworld.388.js (from html.codedthemes.com/datta-able/bootstrap/default/map-location.html)
+20:29:17	Warning: 	Retry after error -5 (Unable to get server's address: Este host não é conhecido. ) at link {s}.tile.osm.org/{z}/{x}/{y}.png (from html.codedthemes.com/datta-able/bootstrap/default/map-location.html)
+20:29:56	Error: 	"Not Found" (404) at link html.codedthemes.com/datta-able/bootstrap/assets/plugins/owl-carousel/css/owl.video.play.png (from html.codedthemes.com/datta-able/bootstrap/assets/plugins/owl-carousel/css/owl.carousel.min.css)
+20:29:56	Error: 	"Not Found" (404) at link html.codedthemes.com/datta-able/bootstrap/assets/plugins/bootstrap-datetimepicker/css/prettify.css (from html.codedthemes.com/datta-able/bootstrap/default/index-ac-package.html)
+20:29:56	Error: 	"Not Found" (404) at link html.codedthemes.com/datta-able/bootstrap/assets/plugins/bootstrap-datetimepicker/css/docs.css (from html.codedthemes.com/datta-able/bootstrap/default/index-ac-package.html)
+20:29:57	Error: 	"Not Found" (404) at link html.codedthemes.com/datta-able/bootstrap/assets/plugins/wizard/js/jquery.bootstrap.js (from html.codedthemes.com/datta-able/bootstrap/default/index-form-package.html)
+20:29:57	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link {s}.tile.osm.org/{z}/{x}/{y}.png (from html.codedthemes.com/datta-able/bootstrap/default/map-location.html)
+20:29:57	Error: 	"Not Found" (404) at link html.codedthemes.com/datta-able/bootstrap/default/extra-pages/landingpage/assets/css/grabbing.png (from html.codedthemes.com/datta-able/bootstrap/default/extra-pages/landingpage/assets/css/owl.carousel.css)
+20:29:57	Error: 	"Not Found" (404) at link html.codedthemes.com/datta-able/bootstrap/default/extra-pages/landingpage/assets/css/AjaxLoader.gif (from html.codedthemes.com/datta-able/bootstrap/default/extra-pages/landingpage/assets/css/owl.theme.css)
+20:30:02	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link {s}.tile.osm.org/{z}/{x}/{y}.png (from html.codedthemes.com/datta-able/bootstrap/default/map-location.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 8 minutes 41 seconds : 521 links scanned, 509 files written (27875240 bytes overall) [10982535 bytes received at 21079 bytes/sec], 23364742 bytes transferred using HTTP compression in 401 files, ratio 26%, 8.9 requests per connection
+(9 errors, 2 warnings, 0 messages)
