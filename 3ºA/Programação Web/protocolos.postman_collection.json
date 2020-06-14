@@ -1,0 +1,476 @@
+{
+	"info": {
+		"_postman_id": "c11fb63e-98e3-4f0a-bda9-9e71c630ef22",
+		"name": "protocolos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/alunos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alunos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/alunos/simples",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/alunos/simples",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alunos",
+						"simples"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/alunos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nome_cientifico\": \"C\",\r\n   \"nome_popular\": \"Cor\",\r\n   \"taxa_mortalidade\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/virus",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"virus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/config/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/config/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"config",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/config/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\n\t\"idioma\":\"italiano\",\n\t\"conexoes\":12,\n\t\"controleAdulto\":\"true\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/config/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"config",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/esportes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\":\"música\",\n\t\"olimpico\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/esportes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"esportes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/esportes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/esportes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"esportes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/esportes/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/esportes/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"esportes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/esportes/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/esportes/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"esportes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/esportes/4",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\":\"dominó\",\n\t\"olimpico\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/esportes/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"esportes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/cidades",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n   \"id\": 123,\r\n   \"nome\": \"São Paulo\",\r\n   \"habitantes\": 59899,\r\n   \"capital\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cidades",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cidades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/cidades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cidades",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cidades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/cidades/contagem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cidades/contagem",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cidades",
+						"contagem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/cidades/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cidades/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cidades",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/sala",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sala",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sala"
+					]
+				},
+				"description": "example get "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/sala/cadastrar/cozinha/23",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sala/cadastrar/testandoPostmam/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sala",
+						"cadastrar",
+						"testandoPostmam",
+						"3"
+					]
+				},
+				"description": "example post "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/sala/excluir",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sala/excluir",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sala",
+						"excluir"
+					]
+				},
+				"description": "example delete "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/sala/atualizar/quarto/3",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sala/atualizar/biblioteca/30",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sala",
+						"atualizar",
+						"biblioteca",
+						"30"
+					]
+				},
+				"description": "example put"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/carros/caros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/carros/caros",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carros",
+						"caros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/carros/marca/FIAT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/carros/marca",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carros",
+						"marca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/carros?marca=VW&modelo=GOL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/carros?marca=VW&modelo=GOL",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carros"
+					],
+					"query": [
+						{
+							"key": "marca",
+							"value": "VW"
+						},
+						{
+							"key": "modelo",
+							"value": "GOL"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,24 @@
+FERRAMENTA
+
+Nome da Ferramenta: POSTMAN
+
+Classificação (Veja o slide 23 do Material desta Aula) : Gerenciamento de Configuração.
+
+Objetivo da Ferramenta: Um dos prdutos que o POSTMAN oferece é o controle de verionamento, facilitando e melhorando otempo de desenvolvimento.
+
+Descrição simplificada do funcionamento (5 a 10 linhas): Durante o desenvolvimento do projeto os dados são salvos em backups  a medida que são atualizados, e pode "pular" para qualquer estado dos dados. Qualquer intergante da equipe esta sempre atualizado com as novas alterações, e versão mais recente. E mesmo que alguém cometa um erro, o arquivo pode ser recuperado e restaurado
+
+Ganho que pode ser obtido: Além das caracteristicas comuns de controle de versionamento, como: backups, time sempre atualizado com a versão mais recente e poder recuperar algum arquivo caso tenha ocorrido algum erro.  Ressalto que encontrei na pesquisa algo que não tinha visto em outras ferramentas da mesma categoria como o GitHub (talvez por não conhecer todas a fundo), que seria "SANDBOX", onde é possível testar e experimentas alterações temporátias em uma área isolada. 
+
+Rastreio de alterações axuliando a saber quem e o que foi alterado, facilitando correções, etc.
+
+Coloca todos na mesma "página" sobre atualizações do projeto e suas vers~]oes mais recentes.
+
+Você utilizaria a ferramenta? ( X ) SIM    (      ) NÃO. Por que?
+
+Pois, além de todos as funcionalidades já destacadas a cima, em seu site, eles descrevem como uma ferramenta fácil de usar, além de ser gratuita e para times de qualqquer tamanho. E tamém, por já conhecer o POSTMAN para teste de rotas, sendo assim, um rpoduto/marca já conhecido.
+
+Links de Referência
+
+https://www.postman.com/product/api-versioning
+

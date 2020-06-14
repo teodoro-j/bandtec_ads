@@ -1,0 +1,128 @@
+Classe ListaEstatica:
+
+public class ListaEstatica {
+
+    private int[] vetor;
+    private int nroElem;
+
+    public ListaEstatica(int tam) {
+        vetor = new int[tam];
+        nroElem = 0;
+    }
+
+    public void adiciona(int elemento) {
+
+        if (nroElem > vetor.length) {
+
+            System.out.println("A lista está cheia!");
+
+        } else {
+
+            vetor[nroElem]= elemento;
+            nroElem++;
+        }
+    }
+
+    public void exibe() {
+
+        for (int i = 0; i < nroElem; i++) {
+            System.out.print(vetor[i]);
+            System.out.println();
+        }
+
+    }
+
+    public int busca(int elemento) {
+
+        for(int i=0; i < vetor.length; i++) {
+            if(vetor[i] == elemento) {
+                return i;
+            }
+        }
+        return -1;
+
+
+    }
+
+    public boolean removePeloIndice(int indice) {
+
+        if(indice<0 || indice>=nroElem) {
+            return false;
+        } else {
+            vetor[indice] = vetor[indice+1];
+            return true;
+        }
+
+    }
+
+    public boolean removeElemento(int elemento) {
+
+        for(int i=0; i < vetor.length; i++) {
+            if (elemento == vetor[i]) {
+                vetor[i] = vetor[i+1];
+                return true;
+            }
+        }
+
+        return false;
+    }
+}
+
+-------------------------------------------------------------------------
+Classe Teste
+
+public class Teste {
+
+    public static void main(String[] args) {
+
+        ListaEstatica lista= new ListaEstatica(5);
+
+
+        lista.adiciona(10);
+        lista.adiciona(20);
+        lista.adiciona(30);
+        lista.adiciona(40);
+
+        System.out.println("Exibir todos os valores:");
+        System.out.println();
+        lista.exibe();
+
+        System.out.println();
+        
+
+        System.out.println();
+
+        System.out.println("Buscar elemento 20:");
+        System.out.println(lista.busca(20));
+
+        System.out.println();
+
+        System.out.println("Remover indice 0:");
+        System.out.println(lista.removePeloIndice(0));
+        lista.exibe();
+
+        System.out.println();
+
+        System.out.println("Remover indice 3");
+        System.out.println(lista.removePeloIndice(3));
+        lista.exibe();
+
+
+        System.out.println();
+
+        System.out.println("Remover elemento 30");
+        System.out.println(lista.removeElemento(30));
+        lista.exibe();
+
+        System.out.println("Remover elemento 40");
+        System.out.println(lista.removeElemento(40));
+        lista.exibe();
+
+        System.out.println();
+
+        System.out.println("Buscar elemento que não existe");
+        System.out.println(lista.busca(700));
+
+    }
+}
+
