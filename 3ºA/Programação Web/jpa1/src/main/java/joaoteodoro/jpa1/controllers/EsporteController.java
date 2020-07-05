@@ -12,9 +12,9 @@ import java.util.Optional;
 public class EsporteController {
 
     @Autowired
-    private EsporteRepository repository; //não criar GET e SET
+    private EsporteRepository repository;
 
-    @PostMapping
+    /* @PostMapping
     public ResponseEntity criarEsporte(@RequestBody Esporte novoEsporte) {
         this.repository.save(novoEsporte);
         return ResponseEntity.created(null).build();
@@ -26,6 +26,17 @@ public class EsporteController {
             return ResponseEntity.ok(this.repository.findAll());
         } else {
             return ResponseEntity.noContent().build();
+        }
+    }*/
+
+    @GetMapping
+    public ResponseEntity getEsportes() {
+        List<Esporte> lista = repository.findAll();
+
+        if (lista.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.ok(lista);
         }
     }
 
@@ -42,7 +53,7 @@ public class EsporteController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity excluirEsporte(@PathVariable Integer id){
+    public ResponseEntity deleteEsporte(@PathVariable Integer id){
         if (this.repository.existsById(id)) {
             this.repository.deleteById(id);
             return ResponseEntity.ok().build();
@@ -50,5 +61,4 @@ public class EsporteController {
             return ResponseEntity.notFound().build();
         }
     }
-
 }

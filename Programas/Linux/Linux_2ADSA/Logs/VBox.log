@@ -1,0 +1,22 @@
+00:00:04.298841 VirtualBox VM 6.0.4 r128413 win.amd64 (Jan 25 2019 18:13:23) release log
+00:00:04.298859 Log opened 2019-10-01T23:28:27.337380500Z
+00:00:04.298861 Build Type: release
+00:00:04.298874 OS Product: Windows 10
+00:00:04.298877 OS Release: 10.0.18362
+00:00:04.298879 OS Service Pack: 
+00:00:04.406465 DMI Product Name: HP 246 G6 Notebook PC
+00:00:04.412947 DMI Product Version: Type1ProductConfigId
+00:00:04.412962 Host RAM: 3982MB (3.8GB) total, 1592MB available
+00:00:04.412965 Executable: C:\Program Files\Oracle\VirtualBox\VirtualBoxVM.exe
+00:00:04.412966 Process ID: 120
+00:00:04.412967 Package type: WINDOWS_64BITS_GENERIC
+00:00:04.414234 Installed Extension Packs:
+00:00:04.414248   None installed!
+00:00:04.414960 Console: Machine state changed to 'Starting'
+00:00:04.415183 Qt version: 5.6.2
+00:00:04.417109 Console: Machine state changed to 'PoweredOff'
+00:00:04.418484 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:04.508090 Power up failed (vrc=VINF_SUCCESS, rc=E_FAIL (0X80004005))
+00:00:05.009418 GUI: UIMachineViewNormal::resendSizeHint: Restoring guest size-hint for screen 0 to 800x600
+00:00:05.009510 ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={ab4164db-c13e-4dab-842d-61ee3f0c1e87} aComponent={DisplayWrap} aText={The console is not powered up}, preserve=false aResultDetail=0
+00:00:05.010094 GUI: Aborting startup due to power up progress issue detected...
