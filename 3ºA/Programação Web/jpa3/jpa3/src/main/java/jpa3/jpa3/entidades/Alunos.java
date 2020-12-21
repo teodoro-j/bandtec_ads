@@ -19,6 +19,17 @@ public class Alunos {
     private String bairro;
     private String classeSocial;
 
+    private String tipoProduto;
+    private int qtdProduto;
+
+    public String getTipoProduto() { return tipoProduto; }
+
+    public void setTipoProduto(String tipoProduto) { this.tipoProduto = tipoProduto; }
+
+    public int getQtdProduto() { return qtdProduto; }
+
+    public void setQtdProduto(int qtdProduto) { this.qtdProduto = qtdProduto; }
+
     @ManyToOne
     private Turma turma;
 

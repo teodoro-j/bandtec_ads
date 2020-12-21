@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--
+    Comentários aqui, como no HTML
+    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meu primeiro App owwwnnn S2"
+        android:textColor="#3DDC84"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:id="@+id/tv_topo"
+        />
+
+    <!--
+    layout_constraintTop_toBottomOf -> indica debaixo de quem vai ficar
+    -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meu segundo texto no Android"
+        android:textColor="#DC3DAF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:id="@+id/tv_segundo"
+        app:layout_constraintTop_toBottomOf="@id/tv_topo"
+        android:layout_marginTop="30dp"
+        />
+
+    <!--
+    visibility - pode ser:
+    visible: visível, é claro
+    invisible: invisivel, porém continua ocupando seu espaço na tela
+    gone: invisível e sequer ocupa espaço na tela
+    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_segundo"
+        android:text="Texto secreto"
+        android:visibility="invisible"
+        android:textSize="35sp"
+        android:id="@+id/tv_secreto"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_secreto"
+        android:text="Último Texto"
+        android:textColor="#03A9F4"
+        android:textSize="35sp"
+        android:id="@+id/tv_ultimo"
+        />
+<!--
+layout_constraintLeft_toRightOf - indica a direita de quem ele fica
+-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Só que não..."
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_secreto"
+        app:layout_constraintLeft_toRightOf="@id/tv_ultimo"
+        />
+
+    <!--
+    EditText -> é como se fosse o <input> do HTML
+    o "hint" é como se fosse o "placeholder" do HTML
+
+    inputType -> determina o tipo de teclado virtual
+    -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_ultimo"
+        android:id="@+id/et_usuario"
+        android:hint="Seu login aqui"
+        android:textSize="30sp"
+        android:inputType="textEmailAddress"
+        />
+
+    <!--
+        o nome da função no onclick é sem () mesmo.
+        ou seja NÃO é com no JS
+    -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="cliqueAqui"
+        android:text="Clique aqui!"
+        android:textSize="20sp"
+        android:id="@+id/bt_01"
+        app:layout_constraintTop_toBottomOf="@id/et_usuario"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="mexerTextos"
+        android:text="Clique aqui também!"
+        android:textSize="20sp"
+        android:id="@+id/bt_02"
+        app:layout_constraintTop_toBottomOf="@id/bt_01"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

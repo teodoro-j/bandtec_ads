@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HEnsinamentos Aleatórios"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+         />
+
+    <Button
+        android:id="@+id/bt_suave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_editor_absoluteY="20dp"
+        app:layout_constraintTop_toBottomOf="#id/tv_princiál"
+        android:text="Ensinamento Suave"
+        android:onClick="trazerEnsinamentoSuave"
+        />
+
+    <Button
+        android:id="@+id/bt_forte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_editor_absoluteY="60dp"
+        app:layout_constraintTop_toBottomOf="#id/bt_suave"
+        android:text="Ensinamento forte"
+        android:onClick="trazerEnsinamentoForte"
+        />
+
+    <FrameLayout
+        android:id="@+id/fr_ensinamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bt_forte">
+
+        <fragment
+            android:id="@+id/tv_inicial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            class="com.example.fragmentado.FragmentoInicial"
+            />
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
